@@ -16,12 +16,16 @@ export default class Footer extends Component {
                             </Link>
                         </div>
                         <div className="col-md-auto ms-auto">
-                            <a className="me-2" href="https://www.instagram.com/feuerwehr_rth/" title="Instagram" target="_blank" rel="noreferrer">
-                                <i className="text-primary bi bi-instagram"/>
-                            </a>
-                            <a href="https://www.facebook.com/feuerwehr.rennertehausen" title="Facebook" target="_blank" rel="noreferrer">
-                                <i className="text-primary bi bi-facebook" />
-                            </a>
+                            <Link href="https://www.instagram.com/feuerwehr_rth/">
+                                <a className="me-2" title="Instagram" target="_blank" rel="noreferrer">
+                                    <i className="text-primary bi bi-instagram" />
+                                </a>
+                            </Link>
+                            <Link href="https://www.facebook.com/feuerwehr.rennertehausen">
+                                <a title="Facebook" target="_blank" rel="noreferrer">
+                                    <i className="text-primary bi bi-facebook" />
+                                </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

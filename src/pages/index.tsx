@@ -14,14 +14,27 @@ export default function Home() {
       </div>
       <div className="col-sm-4">
         <EventCard className="m-2" title="Nächste Termine" />
-        <Card className="m-2" title='Kontakt' items={[
-          <>Vorstand: <Link href="mailto://vorstand@feuerwehr-rennertehausen.de">
+        <Card className="m-2">
+          <h5 className="card-title">Kontakt</h5>
+          <p className="card-text">Vorstand: <Link href="mailto://vorstand@feuerwehr-rennertehausen.de">
             <a className="text-primary text-decoration-none">vorstand@feuerwehr-rennertehausen.de</a>
-          </Link></>
-        ]} />
-        <Card className="m-2" title='Social Media' items={[
-
-        ]} />
+          </Link></p>
+        </Card>
+        <Card className="m-2">
+          <h5 className="card-title">Social Media</h5>
+          <div className="d-flex">
+            <Link href="https://www.instagram.com/feuerwehr_rth/">
+              <a className="me-2" title="Instagram" target="_blank" rel="noreferrer">
+                <i className="text-primary bi bi-instagram" />
+              </a>
+            </Link>
+            <Link href="https://www.facebook.com/feuerwehr.rennertehausen">
+              <a title="Facebook" target="_blank" rel="noreferrer">
+                <i className="text-primary bi bi-facebook" />
+              </a>
+            </Link>
+          </div>
+        </Card>
       </div>
     </div>
   </>

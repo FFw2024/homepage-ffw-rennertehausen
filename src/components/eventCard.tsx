@@ -41,29 +41,30 @@ export default class EventCard extends Component<{ className?: string, title: st
     }
 
     render() {
-        if (this.state.loaded) {
-            const items = this.state.events.map((event, index) => {
-                return (
-                    <span key={index}>
-                        <strong>{event.time}</strong> {event.title}
-                    </span>
-                )
-            });
-
-            return (
-                <Card title={this.props.title} className={this.props.className} items={items} />
-            )
-        }
-        else {
-            return (
-                <Card title={this.props.title} className={this.props.className} items={[
-                    <div key={0} className="d-flex justify-content-center">
-                        <div className="spinner-border" role="status">
-                            <span className="visually-hidden">Loading...</span>
-                        </div>
-                    </div>
-                ]} />
-            )
-        }
+        return (
+            <Card className={this.props.className} >
+                <h5 className="card-title">{this.props.title}</h5>
+                {
+                    this.state.loaded
+                        ? (
+                            <ul className="list-group list-group-flash">
+                                {this.state.events.map((event, index) => {
+                                    return (
+                                        <li key={index} className="list-group-item">
+                                            <span><strong>{event.time}</strong> {event.title}</span>
+                                        </li>
+                                    )
+                                })}
+                            </ul>)
+                        : (
+                            <div key={0} className="d-flex justify-content-center">
+                                <div className="spinner-border" role="status">
+                                    <span className="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+                        )
+                }
+            </Card >
+        );
     }
 }
