@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Card from '../components/card'
+import EventCard from '../components/eventCard'
 import Layout from '../components/layout'
 
 export default function Home() {
@@ -12,10 +13,7 @@ export default function Home() {
         <p>Diese Homepage befindet sich momentan noch im Aufbau. Daher kann es vorkommen, dass einige Links nicht wie gewohnt funktionieren</p>
       </div>
       <div className="col-sm-4">
-        <Card className="m-2" title='Nächste Termine' items={[
-          <><strong>16.04.2022</strong> Osterfeuer</>,
-          <><strong>01.07.2022-04.07.2022</strong> Feuerwehr und Heimatfest</>
-        ]} />
+        <EventCard className="m-2" title="Nächste Termine" />
         <Card className="m-2" title='Kontakt' items={[
           <>Vorstand: <Link href="mailto://vorstand@feuerwehr-rennertehausen.de">
             <a className="text-primary text-decoration-none">vorstand@feuerwehr-rennertehausen.de</a>
