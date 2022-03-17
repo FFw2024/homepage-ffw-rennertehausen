@@ -49,7 +49,7 @@ const menu = {
 export default class Navbar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div className="container">
                     <Link href={menu.brand.href}>
                         <a className="navbar-brand">{menu.brand.text}</a>
@@ -62,7 +62,7 @@ export default class Navbar extends Component {
                             {
                                 menu.menu.map(item => {
                                     if (item.items.length > 0) {
-                                        let subitems = item.items.map((subitem, index)=> {
+                                        let subitems = item.items.map((subitem, index) => {
                                             let id = subitem.id ? subitem.id : `${item.id}Item${index}`;
 
                                             return (<li key={id}>
