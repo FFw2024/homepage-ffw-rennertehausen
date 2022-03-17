@@ -1,7 +1,6 @@
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
-$navbar-height: add(2 * ($navbar-brand-padding-y + $navbar-padding-y), 1.5 * $font-size-base);
-
 main {
-  margin-top: $navbar-height;
+  margin-top: 56px;
+  margin-bottom: 72px;
 }
