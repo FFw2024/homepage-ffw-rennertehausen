@@ -60,10 +60,10 @@ export default class Navbar extends Component {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             {
-                                menu.menu.map(item => {
+                                menu.menu.map((item, index) => {
                                     if (item.items.length > 0) {
-                                        let subitems = item.items.map((subitem, index) => {
-                                            let id = subitem.id ? subitem.id : `${item.id}Item${index}`;
+                                        let subitems = item.items.map((subitem, subIndex) => {
+                                            let id = subitem.id ? subitem.id : `${item.id}Item${subIndex}`;
 
                                             return (<li key={id}>
                                                 <Link href={subitem.getHref()}>
@@ -74,7 +74,7 @@ export default class Navbar extends Component {
 
 
                                         return (
-                                            <li className="nav-item dropdown">
+                                            <li key={index} className="nav-item dropdown">
                                                 <a className="nav-link dropdown-toggle" id={item.id} role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                     {item.name}
                                                 </a>
