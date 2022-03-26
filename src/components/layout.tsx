@@ -12,7 +12,7 @@ export default function Layout({ children }) {
                 <link rel="icon" href="/logo.png" />
             </Head>
             <Navbar />
-            <main className="container pt-3">
+            <main className="container py-3">
                 {children}
             </main>
             <Footer />

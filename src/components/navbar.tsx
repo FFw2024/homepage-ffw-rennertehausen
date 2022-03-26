@@ -40,6 +40,7 @@ const menu = {
         ]),
         new MenuItem("/jugendfeuerwehr", "Jugendfeuerwehr"),
         new MenuItem("/einsatzabteilung", "Einsatzabteilung", "navItemEinsatzabteilung", [
+            new MenuItem("/einsaetze", "Einsätze"),
             new MenuItem("/uebungen", "Übungen"),
             new MenuItem("/fahrzeuge", "Fahrzeuge")
         ])
