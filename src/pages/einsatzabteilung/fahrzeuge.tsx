@@ -1,13 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
-import LF86 from '../../../public/img/BilderFahrzeuge/lf86/lf86_03.png'
-import MTW from '../../../public/img/BilderFahrzeuge/mtw/mtw_01.png'
 
 const data = [
     {
         index: "lf86",
         title: "LF 8/6",
-        image: "/img/BilderFahrzeuge/lf86/lf86_03.png",
+        image: "/img/vehicles/lf86/lf86_03.png",
         technicalData: [
             { name: "Fahrgestell", value: "Mercedes Benz LK 814" },
             { name: "Aufbauhersteller", value: "Schlingmann" },
@@ -26,7 +24,7 @@ const data = [
     {
         index: "mtw",
         title: "MTW",
-        image: MTW.src,
+        image: "/img/vehicles/mtw/mtw_01.png",
         technicalData: [
             { name: "Fahrzeughersteller", value: "Volkswagen Nutzfahrzeuge" },
             { name: "Modell", value: "Transporter (T5, langer Radstand)" },

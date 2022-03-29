@@ -36,7 +36,8 @@ const menu = {
     },
     menu: [
         new MenuItem("/verein", "Wir über uns", "navItemVerein", [
-            new MenuItem("/vorstand", "Vorstand")
+            new MenuItem("/vorstand", "Vorstand"),
+            new MenuItem("/geschichtliches", "Geschichtliches")
         ]),
         new MenuItem("/jugendfeuerwehr", "Jugendfeuerwehr"),
         new MenuItem("/einsatzabteilung", "Einsatzabteilung", "navItemEinsatzabteilung", [
