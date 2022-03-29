@@ -1,11 +1,17 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import Card from '../components/card'
 import EventCard from '../components/eventCard'
 import Layout from '../components/layout'
 
+import banner from '../../public/banner.jpg'
+
 export default function Home() {
-  return (<>
+  return (<div className="mt-n3">
+    <div className="row">
+      <img src="/banner.jpg" alt="banner" className="img-fluid img-banner" />
+    </div>
     <div className="row">
       <div className="col-sm-8">
         <h1>Herzlich Willkommen</h1>
@@ -37,6 +43,6 @@ export default function Home() {
         </Card>
       </div>
     </div>
-  </>
+  </div>
   )
 }
