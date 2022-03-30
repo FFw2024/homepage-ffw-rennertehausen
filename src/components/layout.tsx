@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Footer from "./footer";
 import Navbar from "./navbar";
 
-export default function Layout({ children }) {
+export default function Layout({ children, banner = false }) {
     return (
         <>
             <Head>
@@ -11,7 +11,7 @@ export default function Layout({ children }) {
                 {/* <meta name="description" content="" /> */}
                 <link rel="icon" href="/logo.png" />
             </Head>
-            <Navbar />
+            <Navbar banner={banner} />
             <main className="container py-3">
                 {children}
             </main>
