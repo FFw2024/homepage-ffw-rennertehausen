@@ -1,5 +1,6 @@
-export default class Alarm {
-    index: string;
+import DataEntry from "./dataEntry";
+
+export default class Alarm extends DataEntry {
     title: string;
     image: string;
     time: Date;
@@ -9,5 +10,9 @@ export default class Alarm {
     vehicles: string;
     description: string;
 
-    images: number;
+    images: string[];
+
+    static getYear(alarm: Alarm) {
+        return Number.parseInt(alarm.id.substring(0, 4));
+    }
 }

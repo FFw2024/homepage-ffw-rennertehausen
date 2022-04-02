@@ -1,5 +1,5 @@
-import '../../components/alarms'
-import Alarms from '../../components/alarms'
+import '../../components/alarmComponent'
+import Alarms from '../../components/alarmComponent'
 
 export default function Einsaetze() {
     return <Alarms />

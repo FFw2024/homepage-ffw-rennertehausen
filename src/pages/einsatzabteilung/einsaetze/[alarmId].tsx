@@ -1,4 +1,4 @@
-import Alarms from "../../../components/alarms";
+import Alarms from "../../../components/alarmComponent";
 import { useRouter } from "next/router";
 
 

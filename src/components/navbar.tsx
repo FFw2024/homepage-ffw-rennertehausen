@@ -35,6 +35,7 @@ const menu = {
         text: "Home"
     },
     menu: [
+        new MenuItem("/aktuelles", "Aktuelles"),
         new MenuItem("/verein", "Wir über uns", "navItemVerein", [
             new MenuItem("/vorstand", "Vorstand"),
             new MenuItem("/geschichtliches", "Geschichtliches")
@@ -104,7 +105,7 @@ export default class Navbar extends Component<NavbarProps> {
                                             }
                                             else {
                                                 return (
-                                                    <li className="nav-item">
+                                                    <li key={index} className="nav-item">
                                                         <Link href={item.getHref()}>
                                                             <a className="nav-link">{item.name}</a>
                                                         </Link>

@@ -1,4 +1,5 @@
 import { Component } from "react";
+import DataEntry from "../lib/dataEntry";
 
 type DataComponentState<T> = {
     loaded: boolean;
@@ -9,7 +10,7 @@ type DataComponentProps<T> = typeof DataComponent.defaultProps & {
     id?: string;
 }
 
-export default abstract class DataComponent<T> extends Component<DataComponentProps<T>, DataComponentState<T>> {
+export default abstract class DataComponent<T extends DataEntry> extends Component<DataComponentProps<T>, DataComponentState<T>> {
     static defaultProps = {
         id: null
     }
@@ -22,7 +23,7 @@ export default abstract class DataComponent<T> extends Component<DataComponentPr
         this.state = {
             loaded: false,
             data: []
-        };
+        }; new Map<string, T>()
     }
 
     componentDidMount(): void {
@@ -32,14 +33,16 @@ export default abstract class DataComponent<T> extends Component<DataComponentPr
                     throw new Error(res.statusText);
                 }
 
-                return res.json();
+                return res.json() as Promise<T[]>;
             })
-            .then(data => {
-                this.setState({
-                    loaded: true,
-                    data: data
-                })
-            })
+            .then(data => this.onDataLoaded(this, data));
+    }
+
+    protected onDataLoaded(component: DataComponent<T>, data: T[]) {
+        component.setState({
+            loaded: true,
+            data: data
+        });
     }
 
     render() {

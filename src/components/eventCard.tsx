@@ -5,6 +5,7 @@ import Card from "./card";
 export class Event {
     title: string;
     time: string;
+    display: boolean;
 }
 
 type EventCardState = {
@@ -48,7 +49,7 @@ export default class EventCard extends Component<{ className?: string, title: st
                     this.state.loaded
                         ? (
                             <ul className="list-group list-group-flash">
-                                {this.state.events.map((event, index) => {
+                                {this.state.events.filter(event => event.display ?? true).map((event, index) => {
                                     return (
                                         <li key={index} className="list-group-item">
                                             <span><strong>{event.time}</strong> {event.title}</span>
