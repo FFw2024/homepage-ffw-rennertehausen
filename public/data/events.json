@@ -1,10 +1,13 @@
 [
     {
         "title": "Osterfeuer",
-        "time": "17.04.2022 19 Uhr"
+        "time": "17.04.2022 19 Uhr",
+        "eventId": "Osterfeuer_2022"
     },
     {
         "title": "Feuerwehr- und Heimatfest",
-        "time": "01.07.2022-04.07.2022"
+        "time": "01.07.2022-04.07.2022",
+        "eventId": "Fest_2022",
+        "display": false
     }
 ]

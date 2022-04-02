@@ -3,8 +3,13 @@ $enable-negative-margins: true;
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 main {
-  margin-top: 56px;
   margin-bottom: 72px;
+}
+
+@include media-breakpoint-down(sm) {
+  main {
+    margin-bottom: 96px;
+  }
 }
 
 a.card-link {

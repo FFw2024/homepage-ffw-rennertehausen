@@ -1,13 +1,11 @@
 import Link from "next/link";
 import Alarm from "../lib/alarm";
 import Exercise from "../lib/exercise";
+import { groupBy, mapToArray } from "../lib/utils";
 import Card from "./card";
 import DataComponent from "./dataComponent";
 
-export default class Exercices extends DataComponent<{
-    year: number,
-    exercises: Exercise[]
-}> {
+export default class Exercices extends DataComponent<Exercise> {
     protected dataUrl = "/data/exercises.json"
 
     constructor(props) {
@@ -20,25 +18,27 @@ export default class Exercices extends DataComponent<{
     }
 
     renderListPage() {
+        const map = groupBy(this.state.data, (exercise) => Number.parseInt(exercise.id.substring(0,4)));
+
         return (
             <div className="container">
                 <h1>&#220;bungen</h1>
                 {
-                    this.state.data.map(dataItem => {
+                    mapToArray(map, (year, exercises) => {
                         return (
                             <>
-                                <h3>{dataItem.year}</h3>
+                                <h3>{year}</h3>
                                 <div className="row row-cols-lg-2 g-2">
-                                    {dataItem.exercises.map(exercise => {
-                                        const link = `/einsatzabteilung/uebungen/${exercise.index}`;
+                                    {exercises.map(exercise => {
+                                        const link = `/einsatzabteilung/uebungen/${exercise.id}`;
 
                                         return (
-                                            <div key={exercise.index} className="col">
+                                            <div key={exercise.id} className="col">
                                                 <Link href={link}>
                                                     <a className="card-link">
                                                         <Card className="h-100" orientation="horizontal" image={{
                                                             src: exercise.image,
-                                                            alt: exercise.index
+                                                            alt: ""
                                                         }}>
                                                             <h5 className="card-title" >{exercise.title}</h5>
                                                         </Card>
@@ -57,15 +57,13 @@ export default class Exercices extends DataComponent<{
     }
 
     renderElementPage() {
-        const year = Number.parseInt(this.props.id.substring(0, 4));
-        const exercises = this.state.data.find(data => data.year == year);
-        const exercise = exercises.exercises.find(exercise => exercise.index == this.props.id);
+        const exercise = this.state.data.find(exercise => exercise.id == this.props.id);
 
         var images: string[];
         if (exercise.images > 0) {
             images = [];
             for (var i = 1; i <= exercise.images; i++) {
-                images[i - 1] = `/img/exercises/${exercise.index}/${exercise.index}_${i.toString().padStart(2, '0')}.png`;
+                images[i - 1] = `/img/exercises/${exercise.id}/${exercise.id}_${i.toString().padStart(2, '0')}.png`;
             }
         }
 
@@ -88,7 +86,7 @@ export default class Exercices extends DataComponent<{
                                 images.map((imageSrc, index) => {
                                     return (
                                         <div key={index} className="col">
-                                            <img src={imageSrc} className="img-fluid" />
+                                            <img src={imageSrc} className="img-fluid" alt="" />
                                         </div>
                                     )
                                 })
