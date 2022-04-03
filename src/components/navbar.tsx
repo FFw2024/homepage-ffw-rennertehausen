@@ -64,7 +64,7 @@ export default class Navbar extends Component<NavbarProps> {
                 {
                     this.props.banner &&
                     <div className="row">
-                        <img className="img-fluid img-banner px-0" src="/banner.jpg" alt="" />
+                        <img className="img-fluid img-banner px-0" src="/img/banner.png" alt="" />
                     </div>
                 }
                 <div className="row">

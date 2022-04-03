@@ -9,7 +9,7 @@ export default function Home() {
       <div className="col-sm-8">
         <h1>Herzlich Willkommen</h1>
         <h2>auf der Homepage der freiwilligen Feuerwehr Rennertehausen</h2>
-        <p>Diese Homepage befindet sich momentan noch im Aufbau. Daher kann es vorkommen, dass einige Links nicht wie gewohnt funktionieren</p>
+        <p>Diese Homepage befindet sich momentan noch im Aufbau. Daher kann es vorkommen, dass einige Links nicht wie gewohnt funktionieren.</p>
       </div>
       <div className="col-sm-4">
         <EventCard className="m-2" title="Nächste Termine" />
