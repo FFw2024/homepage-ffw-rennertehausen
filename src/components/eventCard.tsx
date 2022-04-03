@@ -1,12 +1,7 @@
 import { Component } from "react";
 import Card from "./card";
-
-
-export class Event {
-    title: string;
-    time: string;
-    display: boolean;
-}
+import Event from '../lib/event';
+import Link from "next/link";
 
 type EventCardState = {
     loaded: boolean;
@@ -50,11 +45,24 @@ export default class EventCard extends Component<{ className?: string, title: st
                         ? (
                             <ul className="list-group list-group-flash">
                                 {this.state.events.filter(event => event.display ?? true).map((event, index) => {
-                                    return (
-                                        <li key={index} className="list-group-item">
-                                            <span><strong>{event.time}</strong> {event.title}</span>
-                                        </li>
-                                    )
+                                    const content = (<span><strong>{event.time}</strong> {event.title}</span>);
+
+                                    if (event.link) {
+                                        return (
+                                            <li key={index} className="list-group-item list-group-item-action">
+                                                <Link href={event.link}>
+                                                    {content}
+                                                </Link>
+                                            </li>
+                                        )
+                                    }
+                                    else {
+                                        return (
+                                            <li key={index} className="list-group-item">
+                                                {content}
+                                            </li>
+                                        )
+                                    }
                                 })}
                             </ul>)
                         : (
