@@ -1,10 +1,9 @@
 node_modules
-.next
-
 package-lock.json
 
-# build directory
+# build files
+.next
 out
 
 # images
-public/img/
+public/img

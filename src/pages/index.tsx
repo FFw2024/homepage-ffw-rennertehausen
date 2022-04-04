@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Alarms from '../components/alarmComponent'
 import Card from '../components/card'
 import EventCard from '../components/eventCard'
+import NewsComponent from '../components/newsComponent'
 
 export default function Home() {
   return (<>
@@ -10,6 +12,10 @@ export default function Home() {
         <h1>Herzlich Willkommen</h1>
         <h2>auf der Homepage der freiwilligen Feuerwehr Rennertehausen</h2>
         <p>Diese Homepage befindet sich momentan noch im Aufbau. Daher kann es vorkommen, dass einige Links nicht wie gewohnt funktionieren.</p>
+        <div className="mt-3">
+          <h3>Letzter Einsatz</h3>
+          <Alarms id="latest" />
+        </div>
       </div>
       <div className="col-sm-4">
         <EventCard className="m-2" title="Nächste Termine" />
@@ -35,6 +41,9 @@ export default function Home() {
           </div>
         </Card>
       </div>
+    </div>
+    <div className='row'>
+      <NewsComponent />
     </div>
   </>
   )

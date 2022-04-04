@@ -96,6 +96,26 @@ export default class Alarms extends DataComponent<Alarm> {
     }
 
     renderElementPage() {
+        if (this.props.id == "latest") {
+            const alarm = this.state.data.reduce((latest, current) => (latest.time < current.time) ? current : latest);
+
+            const link = `/einsatzabteilung/einsaetze/${alarm.id}`;
+
+            return (
+                <Link href={link} >
+                    <a className="card-link">
+                        <Card className="h-100" orientation='horizontal' image={{
+                            src: alarm.image,
+                            alt: ""
+                        }} >
+                            <h5 className="card-title">{alarm.title}</h5>
+                            <h6 className="card-subtitle mb-2 text-muted">{alarm.word}</h6>
+                        </Card>
+                    </a>
+                </Link>
+            )
+        }
+
         const alarm = this.state.data.find(item => item.id == this.props.id);
 
         return (
