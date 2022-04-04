@@ -98,7 +98,7 @@ export default class NewsComponent extends DataComponent<News> {
                     <h1>{news.title}</h1>
                     {
                         news.description.map((line, index) => {
-                            return (<p key={index}>{line}</p>)
+                            return (<p key={index} className="mb-0">{line}</p>)
                         })
                     }
                     {
