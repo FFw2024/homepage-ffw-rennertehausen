@@ -3,12 +3,12 @@ $enable-negative-margins: true;
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 main {
-  margin-bottom: 72px;
+  margin-bottom: 96px;
 }
 
 @include media-breakpoint-down(sm) {
   main {
-    margin-bottom: 96px;
+    margin-bottom: 144px;
   }
 }
 
