@@ -1,5 +1,16 @@
 [
     {
+        "id": "2022_02",
+        "title": "Einsatz 02/2022",
+        "time": "2022-04-30T02:49",
+        "image": "/img/alarms/2022_02/2021_02_01.png",
+        "word": "H1 (normal), Ausleuchten Einsatzstelle für Rettungsdienst",
+        "location": "OT Rennertehausen",
+        "participants": 11,
+        "vehicles": "LF 8/6, MTW",
+        "description": "Am frühen Samstagmorgen wurden wir zum ausleuchten einer Einsatzstelle alarmiert\nBei unserer Ankunft waren eine RTW Besatzung und eine Notärztin samt NEF bereits vor Ort, um eine verletzte Person zu versorgen.\nDa die Einsatzstelle in völliger Dunkelheit lag, wurde sie von uns ausgeleuchtet."
+    },
+    {
         "id": "2022_01",
         "title": "Einsatz 01/2022",
         "time": "2022-04-01T15:03",
