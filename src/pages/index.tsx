@@ -26,8 +26,42 @@ export default function Home() {
           </Link></p>
         </Card>
         <Card className="m-2">
-          <h5 className="card-title">Social Media</h5>
-          <div className="d-flex">
+          <h5 className="card-title">Links</h5>
+          <div className="d-flex flex-column">
+            <h6 className="card-subtitle my-2">Örtliche Vereine</h6>
+            <Link href="https://www.sv-rennertehausen.de/">
+              <a className="me-2" title="Sportverein Rennertehausen" target="_blank" rel="noreferrer">
+                Sportverein Rennertehausen
+              </a>
+            </Link>
+            <Link href="https://mgv-rennertehausen.de/">
+              <a className="me-2" title="MGV-Rennertehausen" target="_blank" rel="noreferrer">
+                MGV-Rennertehausen
+              </a>
+            </Link>
+            <Link href="https://www.schuetzenverein1930ev.info/">
+              <a className="me-2" title="Schützenverein Rennertehausen" target="_blank" rel="noreferrer">
+                Schützenverein Rennertehausen
+              </a>
+            </Link>
+            <h6 className="card-subtitle my-2">Feuerwehr</h6>
+            <Link href="https://kfv.feuerwehr-waldeck-frankenberg.de/">
+              <a className="me-2" title="Kreisfeuerwehrverband" target="_blank" rel="noreferrer">
+                Kreisfeuerwehrverband
+              </a>
+            </Link>
+            <Link href="https://www.feuerwehr-allendorf-eder.de/">
+              <a className="me-2" title="Feuerwehr Allendorf" target="_blank" rel="noreferrer">
+                Feuerwehr Allendorf
+              </a>
+            </Link>
+            <Link href="https://www.ffw-battenberg.de/">
+              <a className="me-2" title="Feuerwehr Battenberg" target="_blank" rel="noreferrer">
+                Feuerwehr Battenberg
+              </a>
+            </Link>
+            <h6 className="card-subtitle my-2">Social Media</h6>
+            <div className="flex-row">
             <Link href="https://www.instagram.com/feuerwehr_rth/">
               <a className="me-2" title="Instagram" target="_blank" rel="noreferrer">
                 <i className="text-primary bi bi-instagram" />
@@ -38,6 +72,7 @@ export default function Home() {
                 <i className="text-primary bi bi-facebook" />
               </a>
             </Link>
+            </div>
           </div>
         </Card>
       </div>
