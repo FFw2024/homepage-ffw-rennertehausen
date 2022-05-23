@@ -2,11 +2,14 @@
     {
         "title": "Kreisentscheid Leistungswettkämpfe in Korbach",
         "time": "29.05.2022",
-        "eventId": "Kreisentscheid_2022"        
-    }, 
+        "eventId": "Kreisentscheid_2022",
+        "displayUntil": "2022-05-30T00:00+02:00"
+    },
     {
         "title": "Feuerwehr- und Heimatfest",
         "time": "01.07.2022-04.07.2022",
-        "eventId": "Fest_2022"        
+        "eventId": "Fest_2022",
+        "link": "/aktuelles/fest2022",
+        "displayUntil": "2202-07-05T00:00+02:00"
     }
 ]

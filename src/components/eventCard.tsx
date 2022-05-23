@@ -29,11 +29,20 @@ export default class EventCard extends Component<{ className?: string, title: st
                 return response.json() as Promise<Event[]>;
             })
             .then(events => {
+
                 this.setState({
                     loaded: true,
                     events: events
                 });
             });
+    }
+
+    getEvents(): Event[] {
+        if (!this.state.loaded) {
+            return [];
+        }
+
+        return this.state.events.filter(event => (event.display ?? true) && Date.parse(event.displayUntil) > Date.now());
     }
 
     render() {
@@ -44,7 +53,7 @@ export default class EventCard extends Component<{ className?: string, title: st
                     this.state.loaded
                         ? (
                             <ul className="list-group list-group-flash">
-                                {this.state.events.filter(event => event.display ?? true).map((event, index) => {
+                                {this.getEvents().map((event, index) => {
                                     const content = (<span><strong>{event.time}</strong> {event.title}</span>);
 
                                     if (event.link) {
