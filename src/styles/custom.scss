@@ -2,9 +2,16 @@ $enable-negative-margins: true;
 
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
+// $main-width: map.get($container-max-widths, "lg");
+
 main {
   margin-bottom: 96px;
+  max-width: 960px !important;
 }
+
+nav > div.container {
+  max-width: 960px !important;
+};
 
 @include media-breakpoint-down(sm) {
   main {
@@ -15,6 +22,10 @@ main {
 a.card-link {
   text-decoration: none;
   color: inherit;
+}
+
+div.col > div.card {
+  position: static !important;
 }
 
 .row > table {
