@@ -9,9 +9,11 @@ main {
   max-width: 960px !important;
 }
 
-nav > div.container {
+nav>div.container {
   max-width: 960px !important;
-};
+}
+
+;
 
 @include media-breakpoint-down(sm) {
   main {
@@ -24,11 +26,18 @@ a.card-link {
   color: inherit;
 }
 
-div.col > div.card {
+@include media-breakpoint-down(md) {
+  div.card>*>div.col-md-4>img.rounded-start {
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 0.25rem !important;
+  }
+}
+
+div.col>div.card {
   position: static !important;
 }
 
-.row > table {
+.row>table {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
