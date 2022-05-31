@@ -61,20 +61,21 @@ export default class NewsComponent extends DataComponent<News> {
                                     {
                                         news.map(item => {
                                             if (item.display != false) {
-                                                const link = `/aktuelles/${item.id}`;
+                                                const link = item.link ? item.link : `/aktuelles/${item.id}`;
 
                                                 return (
                                                     <div key={item.id} className="col">
-                                                        <Link href={link}>
-                                                            <a className="card-link">
-                                                                <Card className="h-100" orientation='horizontal' image={{
-                                                                    src: item.images ? item.images[0] : null,
-                                                                    alt: ""
-                                                                }}>
-                                                                    <h5 className="card-title">{item.title}</h5>
-                                                                </Card>
-                                                            </a>
-                                                        </Link>
+
+                                                        <Card href={link} orientation='horizontal' image={{
+                                                            src: item.icon,
+                                                            alt: ""
+                                                        }}>
+                                                            <div className="d-flex flex-column h-100">
+                                                                <h5 className="card-title">{item.title}</h5>
+                                                                <p className="card-text overflow-hidden">{item.description}</p>
+                                                                <a className="card-link mt-auto align-self-end">weiterlesen</a>
+                                                            </div>
+                                                        </Card>
                                                     </div>
                                                 )
                                             }
@@ -97,12 +98,9 @@ export default class NewsComponent extends DataComponent<News> {
                 <>
                     <h1>{news.title}</h1>
                     {
-                        news.description.map((line, index) => {
-                            return (<p key={index} className="mb-0">{line}</p>)
-                        })
+                        <p dangerouslySetInnerHTML={{ __html: news.text }}></p>
                     }
                     {
-                        news.images &&
                         <div className="row mt-4">
                             <h3>Bildergalerie</h3>
                             <div className="row row-cols-2 gy-2">

@@ -71,17 +71,13 @@ export default class Alarms extends DataComponent<Alarm> {
 
                                             return (
                                                 <div key={alarm.id} className="col">
-                                                    <Link href={link} >
-                                                        <a className="card-link">
-                                                            <Card className="h-100" orientation='horizontal' image={{
-                                                                src: alarm.image,
-                                                                alt: ""
-                                                            }} >
-                                                                <h5 className="card-title">{alarm.title}</h5>
-                                                                <h6 className="card-subtitle mb-2 text-muted">{alarm.word}</h6>
-                                                            </Card>
-                                                        </a>
-                                                    </Link>
+                                                    <Card className="h-100" href={link} orientation='horizontal' image={{
+                                                        src: alarm.image,
+                                                        alt: ""
+                                                    }} >
+                                                        <h5 className="card-title">{alarm.title}</h5>
+                                                        <h6 className="card-subtitle mb-2 text-muted">{alarm.word}</h6>
+                                                    </Card>
                                                 </div>
                                             )
                                         })
@@ -102,17 +98,13 @@ export default class Alarms extends DataComponent<Alarm> {
             const link = `/einsatzabteilung/einsaetze/${alarm.id}`;
 
             return (
-                <Link href={link} >
-                    <a className="card-link">
-                        <Card className="h-100" orientation='horizontal' image={{
-                            src: alarm.image,
-                            alt: ""
-                        }} >
-                            <h5 className="card-title">{alarm.title}</h5>
-                            <h6 className="card-subtitle mb-2 text-muted">{alarm.word}</h6>
-                        </Card>
-                    </a>
-                </Link>
+                <Card className="h-100" href={link} orientation='horizontal' image={{
+                    src: alarm.image,
+                    alt: ""
+                }} >
+                    <h5 className="card-title">{alarm.title}</h5>
+                    <h6 className="card-subtitle mb-2 text-muted">{alarm.word}</h6>
+                </Card>
             )
         }
 

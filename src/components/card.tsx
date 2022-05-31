@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Component } from "react";
 
 type ImageProps = {
     src: string;
     alt: string;
+    className?: string;
 }
 
 type CardOrientation = 'horizontal' | 'vertical';
@@ -12,6 +14,7 @@ export type CardProps = typeof Card.defaultProps & {
     image?: ImageProps;
     className?: string;
     orientation: CardOrientation;
+    href?: string;
 }
 
 export default class Card extends Component<CardProps> {
@@ -19,6 +22,7 @@ export default class Card extends Component<CardProps> {
         image: null,
         orientation: 'vertical',
         className: null,
+        href: null,
         children: null
     };
 
@@ -28,10 +32,15 @@ export default class Card extends Component<CardProps> {
             cardContent = (
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src={this.props.image.src} className="img-fluid rounded-start" alt={this.props.image.alt} />
+                        <img src={this.props.image.src} className={`img-fluid rounded-start ${this.props.image.className}`} alt={this.props.image.alt} />
                     </div>
                     <div className="col-md-8 card-body">
                         {this.props.children}
+                        { this.props.href &&
+                            <Link href={this.props.href}>
+                                <a className="card-link stretched-link"></a>
+                            </Link>
+                        }
                     </div>
                 </div>
             )
@@ -39,9 +48,14 @@ export default class Card extends Component<CardProps> {
         else if (this.props.orientation == 'vertical' && this.props.image != null) {
             cardContent = (
                 <>
-                    <img src={this.props.image.src} className="card-img-top" alt={this.props.image.alt} />
+                    <img src={this.props.image.src} className={`card-img-top ${this.props.image.className}`} alt={this.props.image.alt} />
                     <div className="card-body">
                         {this.props.children}
+                        {this.props.href &&
+                            <Link href={this.props.href}>
+                                <a className="card-link stretched-link"></a>
+                            </Link>
+                        }
                     </div>
                 </>
             )
@@ -50,6 +64,11 @@ export default class Card extends Component<CardProps> {
             cardContent = (
                 <div className="card-body">
                     {this.props.children}
+                    {this.props.href &&
+                        <Link href={this.props.href}>
+                            <a className="card-link stretched-link"></a>
+                        </Link>
+                    }
                 </div>
             )
         }

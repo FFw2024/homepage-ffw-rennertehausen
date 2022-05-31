@@ -18,7 +18,7 @@ export default class Exercices extends DataComponent<Exercise> {
     }
 
     renderListPage() {
-        const map = groupBy(this.state.data, (exercise) => Number.parseInt(exercise.id.substring(0,4)));
+        const map = groupBy(this.state.data, (exercise) => Number.parseInt(exercise.id.substring(0, 4)));
 
         return (
             <div className="container">
@@ -34,16 +34,12 @@ export default class Exercices extends DataComponent<Exercise> {
 
                                         return (
                                             <div key={exercise.id} className="col">
-                                                <Link href={link}>
-                                                    <a className="card-link">
-                                                        <Card className="h-100" orientation="horizontal" image={{
-                                                            src: exercise.image,
-                                                            alt: ""
-                                                        }}>
-                                                            <h5 className="card-title" >{exercise.title}</h5>
-                                                        </Card>
-                                                    </a>
-                                                </Link>
+                                                <Card className="h-100" href={link} orientation="horizontal" image={{
+                                                    src: exercise.image,
+                                                    alt: ""
+                                                }}>
+                                                    <h5 className="card-title" >{exercise.title}</h5>
+                                                </Card>
                                             </div>
                                         )
                                     })}
