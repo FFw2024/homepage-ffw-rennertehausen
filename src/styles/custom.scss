@@ -9,9 +9,11 @@ main {
   max-width: 960px !important;
 }
 
-nav > div.container {
+nav>div.container {
   max-width: 960px !important;
-};
+}
+
+;
 
 @include media-breakpoint-down(sm) {
   main {
