@@ -30,33 +30,33 @@ export default function Home() {
           <div className="d-flex flex-column">
             <h6 className="card-subtitle my-2">Örtliche Vereine</h6>
             <Link href="https://www.sv-rennertehausen.de/">
-              <a className="me-2" title="Sportverein Rennertehausen" target="_blank" rel="noreferrer">
+              <a className="me-2 text-decoration-none" title="Sportverein Rennertehausen" target="_blank" rel="noreferrer">
                 Sportverein Rennertehausen
               </a>
             </Link>
             <Link href="https://mgv-rennertehausen.de/">
-              <a className="me-2" title="MGV-Rennertehausen" target="_blank" rel="noreferrer">
+              <a className="me-2 text-decoration-none" title="MGV-Rennertehausen" target="_blank" rel="noreferrer">
                 MGV-Rennertehausen
               </a>
             </Link>
             <Link href="https://www.schuetzenverein1930ev.info/">
-              <a className="me-2" title="Schützenverein Rennertehausen" target="_blank" rel="noreferrer">
+              <a className="me-2 text-decoration-none" title="Schützenverein Rennertehausen" target="_blank" rel="noreferrer">
                 Schützenverein Rennertehausen
               </a>
             </Link>
             <h6 className="card-subtitle my-2">Feuerwehr</h6>
             <Link href="https://kfv.feuerwehr-waldeck-frankenberg.de/">
-              <a className="me-2" title="Kreisfeuerwehrverband" target="_blank" rel="noreferrer">
+              <a className="me-2 text-decoration-none" title="Kreisfeuerwehrverband" target="_blank" rel="noreferrer">
                 Kreisfeuerwehrverband
               </a>
             </Link>
             <Link href="https://www.feuerwehr-allendorf-eder.de/">
-              <a className="me-2" title="Feuerwehr Allendorf" target="_blank" rel="noreferrer">
+              <a className="me-2 text-decoration-none" title="Feuerwehr Allendorf" target="_blank" rel="noreferrer">
                 Feuerwehr Allendorf
               </a>
             </Link>
             <Link href="https://www.ffw-battenberg.de/">
-              <a className="me-2" title="Feuerwehr Battenberg" target="_blank" rel="noreferrer">
+              <a className="me-2 text-decoration-none" title="Feuerwehr Battenberg" target="_blank" rel="noreferrer">
                 Feuerwehr Battenberg
               </a>
             </Link>
