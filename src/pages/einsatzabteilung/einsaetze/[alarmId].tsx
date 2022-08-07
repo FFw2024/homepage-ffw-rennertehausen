@@ -7,6 +7,6 @@ export default function Einsaetze() {
     var { alarmId } = router.query;
 
     return (
-        <Alarms id={alarmId} />
+        <Alarms id={alarmId} title="" />
     )
 }

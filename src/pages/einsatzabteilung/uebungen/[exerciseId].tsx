@@ -6,6 +6,6 @@ export default function Uebungen() {
     var { exerciseId } = router.query;
 
     return (
-        <Exercices id={exerciseId} />
+        <Exercices id={exerciseId} title="" />
     )
 }

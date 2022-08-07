@@ -1,5 +1,5 @@
 import Exercices from "../../components/exercises";
 
 export default function Uebungen() {
-    return <Exercices />
+    return <Exercices title="" />
 }

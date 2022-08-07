@@ -1,5 +1,6 @@
 export default function fest2022() {
   return (<>
+  <h1>Feuerwehr- und Heimatfest 2022</h1>
     <h5 className="text-muted">01.-04.07.2022</h5>
     <p>
       In diesem Jahr findet nach 2-j&#228;hriger Pause das traditionelle Heimatfest
@@ -29,7 +30,7 @@ export default function fest2022() {
         </p>
         <p>
           An den weiteren drei Tagen stehen dann Blasmusik, Alpenrock und aktuelle
-          Hits mit der Stimmungskapelle "Frankenland Musikanten" auf unserem
+          Hits mit der Stimmungskapelle &quot;Frankenland Musikanten&quot; auf unserem
           Programm.
         </p>
         <p>
@@ -37,7 +38,7 @@ export default function fest2022() {
           Fahrgesch&#228;fte f&#252;r unsere kleinen und gro&#223;en G&#228;ste.
         </p>
         <p>
-          Mehrere spanndende Stationen zu "Spiel und Spa&#223;", neben dem
+          Mehrere spanndende Stationen zu &quot;Spiel und Spa&#223;&quot;, neben dem
           gro&#223;en Vergn&#252;gungspark, erwarten unsere kleinen G&#228;ste am
           Samstagnachmittag ab 14:00 Uhr.
         </p>
