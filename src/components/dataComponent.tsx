@@ -8,6 +8,7 @@ type DataComponentState<T> = {
 
 type DataComponentProps<T> = typeof DataComponent.defaultProps & {
     id?: string;
+    title: string;
 }
 
 export default abstract class DataComponent<T extends DataEntry> extends Component<DataComponentProps<T>, DataComponentState<T>> {
@@ -56,7 +57,7 @@ export default abstract class DataComponent<T extends DataEntry> extends Compone
         }
         else {
             return (<div className="container">
-                <h1>Eins&#228;tze</h1>
+                <h1>{this.props.title}</h1>
                 <div className="d-flex justify-content-center">
                     <div className="spinner-border" role="status">
                         <span className="visually-hidden">Loading...</span>

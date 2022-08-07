@@ -7,5 +7,6 @@ export default class News extends DataEntry {
     images?: string[];
     link?: string;
     icon: string;
-    text: string;
+    text?: string;
+    src?: string;
 }

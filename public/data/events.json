@@ -1,15 +1,16 @@
 [
     {
-        "title": "Kreisentscheid Leistungswettkämpfe in Korbach",
-        "time": "29.05.2022",
-        "eventId": "Kreisentscheid_2022",
-        "displayUntil": "2022-05-30T00:00+02:00"
+        "title": "Teilnahme an der Krimes der Feuerwehr Haina",
+        "time": "13.08.2022 20 Uhr",
+        "eventId": "Kirmes_Haina",
+        "link": "/aktuelles/termineSommer2022",
+        "displayUntil": "2022-08-13T20:00+02:00"
     },
     {
-        "title": "Feuerwehr- und Heimatfest",
-        "time": "01.07.2022-04.07.2022",
-        "eventId": "Fest_2022",
-        "link": "/aktuelles/fest2022",
-        "displayUntil": "2202-07-05T00:00+02:00"
+        "title": "Teilnahme am Jubiläum 100 Jahre Freiwillige Feuerwehr Dodenau",
+        "time": "20.08.2022 19 Uhr",
+        "eventId": "Fest_Dodenau",
+        "link": "/aktuelles/termineSommer2022",
+        "displayUntil": "2022-08-20T19:00+02:00"
     }
 ]

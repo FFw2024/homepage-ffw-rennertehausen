@@ -4,11 +4,13 @@ import { groupBy, mapToArray } from '../lib/utils';
 import Link from 'next/link';
 import Card from './card';
 import Alarm from '../lib/alarm';
+import { isTemplateTail } from 'typescript';
 
 export default class NewsComponent extends DataComponent<News> {
     protected dataUrl: string = "/data/news.json"
 
     protected onDataLoaded(component: DataComponent<News>, data: News[]): void {
+        // download images
         var promises = data.map((item, index) => {
             return fetch(`/img/news/${item.id}/images.txt`)
                 .then(res => {
@@ -38,6 +40,7 @@ export default class NewsComponent extends DataComponent<News> {
                 });
         });
 
+        // set data
         Promise.all(promises).then((data) => {
             this.setState({
                 loaded: true,
@@ -91,9 +94,34 @@ export default class NewsComponent extends DataComponent<News> {
     }
 
     renderElementPage(): JSX.Element {
-        const news = this.state.data.find(item => item.id === this.props.id);
+        var news = this.state.data.find(item => item.id === this.props.id);
 
-        if (news && news.display != false) {
+        if (!news) {
+            const link = `/aktuelles/${this.props.id}`
+            news = this.state.data.find(item => item.link == link);
+        }
+
+        if (news.src) {
+            const index = this.state.data.indexOf(news);
+            fetch(news.src)
+                .then(res => {
+                    if (res.ok) {
+                        return res.text();
+                    }
+
+                    throw new Error(res.statusText);
+                })
+                .then(data => {
+                    var newsArr = this.state.data;
+                    newsArr[index].text = data;
+
+                    this.setState({
+                        data: newsArr
+                    });
+                });
+        }
+
+        if (news.display != false) {
             return (
                 <>
                     <h1>{news.title}</h1>
@@ -101,22 +129,24 @@ export default class NewsComponent extends DataComponent<News> {
                         <p dangerouslySetInnerHTML={{ __html: news.text }}></p>
                     }
                     {
-                        <div className="row mt-4">
-                            <h3>Bildergalerie</h3>
-                            <div className="row row-cols-2 gy-2">
+                        news.images ? (
+                            <div className="row mt-4">
+                                <h3>Bildergalerie</h3>
+                                <div className="row row-cols-2 gy-2">
 
-                                {
-                                    news.images.map((imageSrc, index) => {
-                                        return (
-                                            <div key={index} className="col">
-                                                <img src={imageSrc} className="img-fluid" alt="" />
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </div>
+                                    {
+                                        news.images.map((imageSrc, index) => {
+                                            return (
+                                                <div key={index} className="col">
+                                                    <img src={imageSrc} className="img-fluid" alt="" />
+                                                </div>
+                                            )
+                                        })
 
-                        </div>
+                                    }
+                                </div>
+
+                            </div>) : null
                     }
                 </>
             )

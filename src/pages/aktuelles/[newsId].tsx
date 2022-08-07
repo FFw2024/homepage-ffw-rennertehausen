@@ -5,6 +5,6 @@ export default function News() {
     const router = useRouter();
     const { newsId } = router.query;
 
-    return (<NewsComponent id={newsId} />)
+    return (<NewsComponent title="" id={newsId} />)
 }
 

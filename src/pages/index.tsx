@@ -14,7 +14,7 @@ export default function Home() {
         <p>Diese Homepage befindet sich momentan noch im Aufbau. Daher kann es vorkommen, dass einige Links nicht wie gewohnt funktionieren.</p>
         <div className="mt-3">
           <h3>Letzter Einsatz</h3>
-          <Alarms id="latest" />
+          <Alarms title="" id="latest" />
         </div>
       </div>
       <div className="col-sm-4">
@@ -78,7 +78,7 @@ export default function Home() {
       </div>
     </div>
     <div className='row'>
-      <NewsComponent />
+      <NewsComponent title="Aktuelles" />
     </div>
   </>
   )
