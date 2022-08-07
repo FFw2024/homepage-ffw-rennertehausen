@@ -2,7 +2,7 @@ import { Component } from "react";
 import DataEntry from "../lib/dataEntry";
 
 type DataComponentState<T> = {
-    loaded: boolean;
+    loaded: boolean;    
     data: T[];
 };
 
@@ -22,7 +22,7 @@ export default abstract class DataComponent<T extends DataEntry> extends Compone
         super(props);
 
         this.state = {
-            loaded: false,
+            loaded: false,            
             data: []
         }; new Map<string, T>()
     }

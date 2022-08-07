@@ -1,17 +1,15 @@
 import DataComponent from './dataComponent'
 import News from "../lib/news"
 import { groupBy, mapToArray } from '../lib/utils';
-import Link from 'next/link';
 import Card from './card';
-import Alarm from '../lib/alarm';
-import { isTemplateTail } from 'typescript';
+import { connect } from 'http2';
 
 export default class NewsComponent extends DataComponent<News> {
     protected dataUrl: string = "/data/news.json"
 
-    protected onDataLoaded(component: DataComponent<News>, data: News[]): void {
+    protected async onDataLoaded(component: DataComponent<News>, data: News[]): Promise<void> {
         // download images
-        var promises = data.map((item, index) => {
+        var promises = data.map((item) => {
             return fetch(`/img/news/${item.id}/images.txt`)
                 .then(res => {
                     if (res.ok) {
@@ -37,6 +35,25 @@ export default class NewsComponent extends DataComponent<News> {
                     }
 
                     return item;
+                })
+                .then(async item => {
+                    if (item.src) {
+                        return await fetch(item.src)
+                            .then(res => {
+                                if (res.ok) {
+                                    return res.text();
+                                }
+
+                                throw new Error(res.statusText);
+                            })
+                            .then(page => {
+                                item.text = page;
+                                return item;
+                            })
+                    }
+                    else {
+                        return item;
+                    }
                 });
         });
 
@@ -46,7 +63,7 @@ export default class NewsComponent extends DataComponent<News> {
                 loaded: true,
                 data: data
             });
-        })
+        });
     }
 
     renderListPage(): JSX.Element {
@@ -94,48 +111,28 @@ export default class NewsComponent extends DataComponent<News> {
     }
 
     renderElementPage(): JSX.Element {
-        var news = this.state.data.find(item => item.id === this.props.id);
+        var item = this.state.data.find(item => item.id === this.props.id);
 
-        if (!news) {
-            const link = `/aktuelles/${this.props.id}`
-            news = this.state.data.find(item => item.link == link);
+        if (!item) {
+            const link = `/aktuelles/${this.props.id}`;
+            item = this.state.data.find(item => item.link == link);
         }
 
-        if (news.src) {
-            const index = this.state.data.indexOf(news);
-            fetch(news.src)
-                .then(res => {
-                    if (res.ok) {
-                        return res.text();
-                    }
-
-                    throw new Error(res.statusText);
-                })
-                .then(data => {
-                    var newsArr = this.state.data;
-                    newsArr[index].text = data;
-
-                    this.setState({
-                        data: newsArr
-                    });
-                });
-        }
-
-        if (news.display != false) {
+        if (item.display != false) {
             return (
                 <>
-                    <h1>{news.title}</h1>
+                    <h1>{item.title}</h1>
                     {
-                        <p dangerouslySetInnerHTML={{ __html: news.text }}></p>
+                        <div dangerouslySetInnerHTML={{ __html: item.text }}></div>
                     }
                     {
-                        news.images ? (
+                        item.images ? (
                             <div className="row mt-4">
                                 <h3>Bildergalerie</h3>
                                 <div className="row row-cols-2 gy-2">
 
                                     {
-                                        news.images.map((imageSrc, index) => {
+                                        item.images.map((imageSrc, index) => {
                                             return (
                                                 <div key={index} className="col">
                                                     <img src={imageSrc} className="img-fluid" alt="" />
@@ -149,7 +146,7 @@ export default class NewsComponent extends DataComponent<News> {
                             </div>) : null
                     }
                 </>
-            )
+            );
         }
 
         return null;
