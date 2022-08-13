@@ -1,0 +1,161 @@
+{
+    "alarms": {
+        "2021_02": {
+            "files": [
+                "img/alarms/2021_02/2021_02_01.png",
+                "img/alarms/2021_02/2021_02_02.png",
+                "img/alarms/2021_02/2021_02_03.png",
+                "img/alarms/2021_02/2021_02_04.png",
+                "img/alarms/2021_02/2021_02_05.png",
+                "img/alarms/2021_02/2021_02_06.png",
+                "img/alarms/2021_02/2021_02_07.png",
+                "img/alarms/2021_02/2021_02_08.png"
+            ]
+        },
+        "2021_03": {
+            "files": [
+                "img/alarms/2021_03/2021_03_01.png"
+            ]
+        },
+        "2021_04": {
+            "files": [
+                "img/alarms/2021_04/2021_04_01.png"
+            ]
+        },
+        "2021_05": {
+            "files": [
+                "img/alarms/2021_05/2021_05_01.png",
+                "img/alarms/2021_05/2021_05_02.png"
+            ]
+        },
+        "2021_07": {
+            "files": [
+                "img/alarms/2021_07/2021_07_01.png",
+                "img/alarms/2021_07/2021_07_02.png",
+                "img/alarms/2021_07/2021_07_03.png"
+            ]
+        },
+        "files": []
+    },
+    "exercises": {
+        "2020_01": {
+            "files": [
+                "img/exercises/2020_01/2020_01_01.png",
+                "img/exercises/2020_01/2020_01_02.png",
+                "img/exercises/2020_01/2020_01_03.png",
+                "img/exercises/2020_01/2020_01_04.png",
+                "img/exercises/2020_01/2020_01_05.png",
+                "img/exercises/2020_01/2020_01_06.png",
+                "img/exercises/2020_01/2020_01_07.png",
+                "img/exercises/2020_01/2020_01_08.png",
+                "img/exercises/2020_01/2020_01_09.png",
+                "img/exercises/2020_01/2020_01_10.png",
+                "img/exercises/2020_01/2020_01_11.png",
+                "img/exercises/2020_01/2020_01_12.png",
+                "img/exercises/2020_01/2020_01_13.png"
+            ]
+        },
+        "2020_02": {
+            "files": [
+                "img/exercises/2020_02/2020_02_01.png",
+                "img/exercises/2020_02/2020_02_02.png",
+                "img/exercises/2020_02/2020_02_03.png",
+                "img/exercises/2020_02/2020_02_04.png",
+                "img/exercises/2020_02/2020_02_05.png",
+                "img/exercises/2020_02/2020_02_06.png",
+                "img/exercises/2020_02/2020_02_07.png",
+                "img/exercises/2020_02/2020_02_08.png",
+                "img/exercises/2020_02/2020_02_09.png",
+                "img/exercises/2020_02/2020_02_10.png",
+                "img/exercises/2020_02/2020_02_11.png",
+                "img/exercises/2020_02/2020_02_12.png",
+                "img/exercises/2020_02/2020_02_13.png"
+            ]
+        },
+        "2020_03": {
+            "files": [
+                "img/exercises/2020_03/2020_03_01.png",
+                "img/exercises/2020_03/2020_03_02.png",
+                "img/exercises/2020_03/2020_03_03.png",
+                "img/exercises/2020_03/2020_03_04.png",
+                "img/exercises/2020_03/2020_03_05.png",
+                "img/exercises/2020_03/2020_03_06.png",
+                "img/exercises/2020_03/2020_03_07.png",
+                "img/exercises/2020_03/2020_03_08.png",
+                "img/exercises/2020_03/2020_03_09.png",
+                "img/exercises/2020_03/2020_03_10.png",
+                "img/exercises/2020_03/2020_03_11.png",
+                "img/exercises/2020_03/2020_03_12.png",
+                "img/exercises/2020_03/2020_03_13.png",
+                "img/exercises/2020_03/2020_03_14.png"
+            ]
+        },
+        "2021_01": {
+            "files": [
+                "img/exercises/2021_01/2021_01_01.png",
+                "img/exercises/2021_01/2021_01_02.png",
+                "img/exercises/2021_01/2021_01_03.png",
+                "img/exercises/2021_01/2021_01_04.png",
+                "img/exercises/2021_01/2021_01_05.png",
+                "img/exercises/2021_01/2021_01_06.png",
+                "img/exercises/2021_01/2021_01_07.png",
+                "img/exercises/2021_01/2021_01_08.png",
+                "img/exercises/2021_01/2021_01_09.png",
+                "img/exercises/2021_01/2021_01_10.png"
+            ]
+        },
+        "2021_02": {
+            "files": [
+                "img/exercises/2021_02/2021_02_01.png",
+                "img/exercises/2021_02/2021_02_02.png",
+                "img/exercises/2021_02/2021_02_03.png",
+                "img/exercises/2021_02/2021_02_04.png",
+                "img/exercises/2021_02/2021_02_05.png",
+                "img/exercises/2021_02/2021_02_06.png",
+                "img/exercises/2021_02/2021_02_07.png",
+                "img/exercises/2021_02/2021_02_08.png"
+            ]
+        },
+        "2021_03": {
+            "files": [
+                "img/exercises/2021_03/2021_03_01.png",
+                "img/exercises/2021_03/2021_03_02.png",
+                "img/exercises/2021_03/2021_03_03.png",
+                "img/exercises/2021_03/2021_03_04.png",
+                "img/exercises/2021_03/2021_03_05.png",
+                "img/exercises/2021_03/2021_03_06.png",
+                "img/exercises/2021_03/2021_03_07.png",
+                "img/exercises/2021_03/2021_03_08.png",
+                "img/exercises/2021_03/2021_03_09.png"
+            ]
+        },
+        "files": []
+    },
+    "vehicles": {
+        "lf86": {
+            "files": [
+                "img/vehicles/lf86/lf86_01.png",
+                "img/vehicles/lf86/lf86_02.png",
+                "img/vehicles/lf86/lf86_03.png",
+                "img/vehicles/lf86/lf86_04.png"
+            ]
+        },
+        "mtw": {
+            "files": [
+                "img/vehicles/mtw/mtw_01.png"
+            ]
+        },
+        "files": []
+    },
+    "vorstand": {
+        "files": [
+            "img/vorstand/JW1.png",
+            "img/vorstand/JW2.png",
+            "img/vorstand/V1.png",
+            "img/vorstand/V2.png",
+            "img/vorstand/WF1.png",
+            "img/vorstand/WF2.png"
+        ]
+    },
+    "files": []
+}
