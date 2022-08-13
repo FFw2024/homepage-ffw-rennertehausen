@@ -1,0 +1,34 @@
+$enable-negative-margins: true;
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// $main-width: map.get($container-max-widths, "lg");
+
+main {
+  margin-bottom: 96px;
+  max-width: 960px !important;
+}
+
+nav>div.container {
+  max-width: 960px !important;
+}
+
+@include media-breakpoint-down(sm) {
+  main {
+    margin-bottom: 144px;
+  }
+}
+
+.row > table {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+img.img-banner {
+  max-height: 10rem;
+  object-fit: cover;
+}
