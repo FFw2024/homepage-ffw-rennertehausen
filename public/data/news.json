@@ -1,29 +1,25 @@
 [
     {
         "title": "Termine Sommer 2022",
-        "id": "2022_04",
-        "link": "/aktuelles/termineSommer2022",
+        "id": "2022_04",        
         "description": "Die Feuerwehren aus Haina und Dodenau haben uns zu ihren Festen eingeladen. Diesen Einladungen wollen wir gerne folgen."        
     },
     {
         "title": "Feuerwehr- und Heimatfest 2022",
-        "id": "2022_03",
-        "link": "/aktuelles/fest2022",
-        "icon": "/img/news/fest2022/banner.png",
-        "description": "In diesem Jahr ist es endlich wieder soweit! Das traditionelle Heimat- und Feuerwehrfest in Rennertehausen wird nach 3 Jahren mit Einschränkungen durch die Corona-Pandemie wieder stattfinden."
+        "id": "2022_03",        
+        "icon": "img/news/fest2022/banner.png",
+        "description": "In diesem Jahr ist es endlich wieder soweit! Das traditionelle Heimat- und Feuerwehrfest in Rennertehausen wird nach 3 Jahren mit Einschränkungen durch die Corona-Pandemie wieder stattfinden."        
     },
     {
         "title": "Osterfeuer 2022",
         "id": "2022_02",
-        "icon": "/img/news/2022_02/2022_02_01.png",
-        "description": "In diesem Jahr laden wir euch wieder herzlich zu unserem Osterfeuer ein.",
-        "text": "In diesem Jahr laden wir euch wieder herzlich zu unserem Osterfeuer ein. Wie beim letzten Mal findet das Osterfeuer vor dem DGH statt.<br />Für Essen, Trinken und Feuer werden wir sorgen.<br />Das Feuer wird bei Einbruch der Dunkelheit angezündet.<br />Wir freuen uns auf euch!<br /><br />INFO:<br />Um eine Belästigung der Anwohner, durch zu starke Rauchentwicklung, zu vermeiden verbrennen wir ausschließlich trockenes Scheitholz. Eine Anlieferung von Strauchschnitt etc. ist daher leider nicht möglich.<br />Wir freuen uns, dass wir endlich wieder mit euch feiern können!"
+        "icon": "img/news/2022_02/2022_02_01.png",
+        "description": "In diesem Jahr laden wir euch wieder herzlich zu unserem Osterfeuer ein."        
     },
     {
         "title": "Einrichtung einer Unterkunft für Geflüchtete",
         "id": "2022_01",
-        "icon": "/img/news/2022_01/2022_01_01.png",
-        "description": "Am Samstag, den 19.03.2022 haben wir zusammen mit den Feuerwehren der Gemeinde Allendorf zusammen eine Unterkunft für Geflüchtete aus der Ukraine eingerichtet.",
-        "text": "Am Samstag, den 19.03.2022 haben wir zusammen mit den Feuerwehren der Gemeinde Allendorf zusammen eine Unterkunft für Geflüchtete aus der Ukraine eingerichtet.<br />In dieser Unterkunft können bis zu 300 Geflüchtete untergebracht werden."
+        "icon": "img/news/2022_01/2022_01_01.png",
+        "description": "Am Samstag, den 19.03.2022 haben wir zusammen mit den Feuerwehren der Gemeinde Allendorf zusammen eine Unterkunft für Geflüchtete aus der Ukraine eingerichtet."        
     }
 ]
