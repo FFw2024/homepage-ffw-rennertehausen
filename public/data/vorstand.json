@@ -1,0 +1,50 @@
+{
+    "vorstand": [
+        {
+            "role": "1. Vorsitzender",
+            "name": "Mike Stahl",
+            "image": "img/vorstand/V1.png"
+        },
+        {
+            "role": "2. Vorsitzender",
+            "name": "Philipp Geil",
+            "image": "img/vorstand/V2.png"
+        },
+        {
+            "role": "3. Vorsitzender",
+            "name": "Horst Schäfer"
+        },
+        {
+            "role": "Schriftführer",
+            "name": "Robin Feike"
+        },
+        {
+            "role": "Kassiererin",
+            "name": "Bianca Clemens"
+        }
+    ],
+    "wehrfuehrung": [
+        {
+            "role": "Wehrführer",
+            "name": "Christian Schubert",
+            "image": "img/vorstand/WF1.png"
+        },
+        {
+            "role": "stellv. Wehrführer",
+            "name": "Andreas Noleppa",
+            "image": "img/vorstand/WF2.png"
+        }
+    ],
+    "jugendfeuerwehr": [
+        {
+            "role": "Jugendwartin",
+            "name": "Jana Hesse",
+            "image": "img/vorstand/JW1.png"
+        },
+        {
+            "role": "stellv. Jugendwart",
+            "name": "David Schubert",
+            "image": "img/vorstand/JW2.png"
+        }
+    ]
+}
