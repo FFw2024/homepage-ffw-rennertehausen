@@ -12,14 +12,13 @@
 
     <link rel="stylesheet" href="styles/custom.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
 </head>
 
 <body>
     <!-- header and navbar -->
     <div class="container-fluid">
         <div class="row">
-            <img class="img-fluid img-banner px-0" src="img/banner.png" />
+            <img class="img-fluid img-banner px-0" src="img/banner.png" alt="banner" />
         </div>
         <div class="row">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky px-0">
@@ -74,7 +73,108 @@
         </div>
     </div>
     <main class="container-md py-3">
-        <!-- page content -->
+        <div class="row">
+            <div class="col-sm-8">
+                <h1>Herzlich Willkommen</h1>
+                <h2>auf der Homepage der Freiwilligen Feuerwehr Rennertehausen</h2>
+                <p>Diese Homepage befindet sich momentan noch im Aufbau. Daher kann es vorkommen, dass einige Links nicht wie gewohnt funktionieren.</p>
+
+                <!-- Last alarm -->
+                <div class="mt-3">
+                    <h3>Letzter Einsatz</h3>
+                    <div class="col">
+                        <div id="lastAlarmCard" class="card h-100">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img class="img-fluid rounded-start" alt="Letzter Einsatz" />
+                                </div>
+                                <div class="col-md-8 card-body">
+                                    <h5 class="card-title"></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"></h6>
+                                    <a class="streched-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card m-2" id="eventsCard">
+                    <div class="card-body">
+                        <h5 class="card-title">N&#228;chste Termine</h5>
+                        <div class="list-group list-group-flush">
+                        </div>
+                    </div>
+
+                    <template id="eventTemplate">
+                        <a class="list-group-item list-group-item-action">
+                            <strong></strong><span></span>
+                        </a>
+                    </template>
+                </div>
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Kontakt:</h5>
+                        <p class="card-text">Vorstand: <a href="mailto://vorstand@feuerwehr-rennertehausen.de" class="text-decoration-none text-primary">vorstand@feuerwehr-rennertehausen.de</a></p>
+                    </div>
+                </div>
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Links</h5>
+                        <div class="d-flex flex-column">
+                            <h6 class="card-subtitle my-2">&#214;rtliche Vereine</h6>
+                            <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener" href="https://www.sv-rennertehausen.de">Sportverin Rennertehausen</a>
+                            <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener" href="https://mgv-rennertehausen.de">MGV Rennertehausen</a>
+                            <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener" href="https://www.schuetzenverein1930ev.info">Sch&#252;tzenverein Rennertehausen</a>
+
+                            <h6 class="card-subtitle my-2">Feuerwehr</h6>
+                            <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener" href="https://kfv.feuerwehr-waldeck-frankenberg.de">Kreisfeuerwehrverband</a>
+                            <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener" href="https://www.feuerwehr-allendorf-eder.de">Feuerwehr Allendorf</a>
+                            <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener" href="https://www.ffw-battenberg.de">Feuerwehr Battenberg</a>
+
+                            <h6 class="card-subtitle my-2">Social Media</h6>
+                            <div class="flex-row">
+                                <a class="me-2" title="Instagram" target="_blank" rel="noreferrer noopener" href="https://www.instagram.com/feuerwehr_rth">
+                                    <i class="text-primary bi bi-instagram"></i>
+                                </a>
+                                <a class="me-2" title="Facebook" target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/feuerwehr.rennertehausen">
+                                    <i class="text-primary bi bi-facebook"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h1>Aktuelles</h1>
+            <div class="row row-cols-1 g-2" id="newsList">
+
+                <template>
+                    <div class="col">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img class="img-fluid rounded-start" />
+                                </div>
+                                <div class="col-md-8 card-body">
+                                    <div class="d-flex flex-column h-100">
+                                        <h5 class="card-title"></h5>
+                                        <p class="card-text overflow-hidden"></p>
+                                        <a class="card-link mt-auto align-self-end">weiterlesen</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="./js/index.js"></script>
     </main>
     <!-- footer -->
     <footer class="fixed-bottom bg-dark container-fluid">
@@ -84,30 +184,19 @@
                     <span class="text-muted">&copy; 2022 - Feuerwehr Rennertehausen</span>
                 </div>
                 <div class="col-sm-auto col-6 me-sm-2 text-center text-sm-start">
-                    <Link href="impressum.html">
-                    <a class="text-primary text-decoration-none">Impressum</a>
-                    </Link>
+                    <a href="impressum.html" class="text-primary text-decoration-none">Impressum</a>
                 </div>
                 <div class="col-sm col-6">
                     <div class="d-flex justify-content-end">
                         <a class="me-2" href="https://www.instagram.com/feuerwehr_rth/" title="Instagram"
-                            target="_blank" rel="noreferrer">
+                            target="_blank" rel="noreferrer noopener">
                             <i class="text-primary bi bi-instagram"></i>
                         </a>
                         <a href="https://www.facebook.com/feuerwehr.rennertehausen" title="Facebook" target="_blank"
-                            rel="noreferrer">
+                            rel="noreferrer noopener">
                             <i class="text-primary bi bi-facebook"></i>
                         </a>
                     </div>
-                </div>
-                <div class="w-100 d-none d-md-block"></div>
-                <div class="col-12 text-center">
-                    <span class="text-white-50">Fehler und Verbesserungsvorschl&#228;ge k&#246;nnen gerne
-                        <a class="text-primary text-decoration-none"
-                            href="https://github.com/PhiGei2000/homepage-ffw-rennertehausen/issues" target="_blank">
-                            hier
-                        </a>
-                        gemeldet werden</span>
                 </div>
             </div>
         </div>

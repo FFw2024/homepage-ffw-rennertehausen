@@ -61,17 +61,17 @@ if (searchParams) {
                                 minute: "2-digit"
                             })} Uhr</td>
                         </tr>
-                        ${alarm.participants &&
+                        ${alarm.participants ?
                             `<tr>
                                 <th scope='row'>Einsatzkr&#228;fte</th>
                                 <td>${alarm.participants}</td>
-                            </tr>`
+                            </tr>` : ''
                         }
-                        ${alarm.vehicles &&
+                        ${alarm.vehicles ?
                             `<tr>
                                 <th scope='row'>Fahrzeuge</th>
                                 <td>${alarm.vehicles}</td>
-                            </tr>`
+                            </tr>`: ''
                         }
                     </tbody>
                 </table>
@@ -89,21 +89,20 @@ if (searchParams) {
 } else {
   function getCard(item) {
     return `
-        <div class="col">        
+        <div class="col">
             <div class="card h-100">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        ${item.image ? `<img class="img-fluid rounded-start" src="${item.image}" />` : ''}                     
+                        ${item.image ? `<img class="img-fluid rounded-start" src="${item.image}" />` : ''}
                     </div>
                     <div class="card-body col-md-8">
                         <h5 class="card-title">${item.title}</h5>
                         <h6 class="card-subtitle text-muted">${item.word}</h6>
-                        <a class="card-link stretched-link" href="einsatzabteilung/einsaetze.html?id=${
-        item.id}"></a>
+                        <a class="card-link stretched-link" href="einsatzabteilung/einsaetze.html?id=${item.id}"></a>
                     </div>
                 </div>
-            </div>   
-        </div>     
+            </div>
+        </div>
           `;
   }
 
@@ -115,11 +114,11 @@ if (searchParams) {
                                         <section>
                                             <h3>${year}</h3>
                                             <div class="row row-cols-md-2 g-2 m-2">
-                                                
+
                                                 ${
                                               alarms.map(getCard).join('')}
 
-                                            </div>                                            
+                                            </div>
                                         </section>
                                         `;
                                    })

@@ -1,25 +1,25 @@
 [
     {
         "title": "Termine Sommer 2022",
-        "id": "2022_04",        
-        "description": "Die Feuerwehren aus Haina und Dodenau haben uns zu ihren Festen eingeladen. Diesen Einladungen wollen wir gerne folgen."        
+        "id": "2022_04",
+        "description": "Die Feuerwehren aus Haina und Dodenau haben uns zu ihren Festen eingeladen. Diesen Einladungen wollen wir gerne folgen."
     },
     {
         "title": "Feuerwehr- und Heimatfest 2022",
-        "id": "2022_03",        
+        "id": "2022_03",
         "icon": "img/news/fest2022/banner.png",
-        "description": "In diesem Jahr ist es endlich wieder soweit! Das traditionelle Heimat- und Feuerwehrfest in Rennertehausen wird nach 3 Jahren mit Einschränkungen durch die Corona-Pandemie wieder stattfinden."        
+        "description": "In diesem Jahr ist es endlich wieder soweit! Das traditionelle Heimat- und Feuerwehrfest in Rennertehausen wird nach 3 Jahren mit Einschränkungen durch die Corona-Pandemie wieder stattfinden."
     },
     {
         "title": "Osterfeuer 2022",
         "id": "2022_02",
         "icon": "img/news/2022_02/2022_02_01.png",
-        "description": "In diesem Jahr laden wir euch wieder herzlich zu unserem Osterfeuer ein."        
+        "description": "In diesem Jahr laden wir euch wieder herzlich zu unserem Osterfeuer ein."
     },
     {
         "title": "Einrichtung einer Unterkunft für Geflüchtete",
         "id": "2022_01",
         "icon": "img/news/2022_01/2022_01_01.png",
-        "description": "Am Samstag, den 19.03.2022 haben wir zusammen mit den Feuerwehren der Gemeinde Allendorf zusammen eine Unterkunft für Geflüchtete aus der Ukraine eingerichtet."        
+        "description": "Am Samstag, den 19.03.2022 haben wir zusammen mit den Feuerwehren der Gemeinde Allendorf zusammen eine Unterkunft für Geflüchtete aus der Ukraine eingerichtet."
     }
 ]
