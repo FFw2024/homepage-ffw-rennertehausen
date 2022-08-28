@@ -1,9 +1,12 @@
 #!/bin/bash
 
 # create server backup
+echo "Backup remote content"
 ssh feuerwehr-rennertehausen.de@ssh.strato.de bash ./createBackup.sh
 echo "Backup created"
 
-npm run build && npm run export
+echo "compile sass content"
+sass ./styles/custom.scss ./public/styles/custom.css
 
-scp -r ./out/* feuerwehr-rennertehausen.de@ssh.strato.de:/www/
+echo "upload files"
+rsync -azP --delete ./public/* feuerwehr-rennertehausen.de@ssh.strato.de:./www/

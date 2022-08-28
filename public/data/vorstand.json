@@ -3,12 +3,12 @@
         {
             "role": "1. Vorsitzender",
             "name": "Mike Stahl",
-            "image": "img/vorstand/V1.png"
+            "image": "img/vorstand/V1.jpeg"
         },
         {
             "role": "2. Vorsitzender",
             "name": "Philipp Geil",
-            "image": "img/vorstand/V2.png"
+            "image": "img/vorstand/V2.jpeg"
         },
         {
             "role": "3. Vorsitzender",
@@ -27,24 +27,24 @@
         {
             "role": "Wehrführer",
             "name": "Christian Schubert",
-            "image": "img/vorstand/WF1.png"
+            "image": "img/vorstand/WF1.jpeg"
         },
         {
             "role": "stellv. Wehrführer",
             "name": "Andreas Noleppa",
-            "image": "img/vorstand/WF2.png"
+            "image": "img/vorstand/WF2.jpeg"
         }
     ],
     "jugendfeuerwehr": [
         {
             "role": "Jugendwartin",
             "name": "Jana Hesse",
-            "image": "img/vorstand/JW1.png"
+            "image": "img/vorstand/JW1.jpeg"
         },
         {
             "role": "stellv. Jugendwart",
             "name": "David Schubert",
-            "image": "img/vorstand/JW2.png"
+            "image": "img/vorstand/JW2.jpeg"
         }
     ]
 }

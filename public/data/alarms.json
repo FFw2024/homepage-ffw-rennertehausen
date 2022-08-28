@@ -6,7 +6,7 @@
             "time": "2022-07-11T04:47",
             "word": "F3 Brand Halle Holzfachbetrieb",
             "location": "Allendorf, Bahnhofstraße",
-            "image": "img/alarms/2022_06/2022_06_01.png",
+            "image": "img/alarms/2022_06/2022_06_01.jpeg",
             "vehicles": "LF 8/6, MTF",
             "participants": 15,
             "description": "Am frühen Morgen wurden wir heute zu einem Brand in einem Holzverarbeitenden Betrieb gerufen.\nBei eintreffen an der Einsatzstelle stand ein Teil eines Gebäudes in Vollbrand.\nDie nachalarmierte Drehleiter aus Frankenberg hat eine Brandbekämpfung samt Öffnung des Giebels ermöglicht.\nDie Lösch- und Aufräumarbeiten zogen sich über mehrere Stunden.\nDie SEG des DRK Frankenberg versorgte uns später mit Kaffee und Brötchen.\nAußerdem dabei war die Feuerwehr Bromskirchen und der Gerätewagen Atemschutz aus Frankenberg."
@@ -17,7 +17,7 @@
             "time": "2022-07-02T03:30",
             "word": "H1 Y Türöffnung",
             "location": "Schulstraße, Haine",
-            "image": "img/alarms/2022_05/2022_05_01.png",
+            "image": "img/alarms/2022_05/2022_05_01.jpeg",
             "vehicles": "LF 8/6",
             "participants": 11,
             "description": "In der Nacht von Freitag auf Samstag wurden wir, wegen eines medizinischen Notfalls, zu einer Türöffnung nach Haine alarmiert. Die Person wurde nach unserem Eintreffen und nach dem Öffnen der Tür glücklicherweise wohlauf aufgefunden."
@@ -36,7 +36,7 @@
             "id": "2022_03",
             "title": "Einsatz 03/2022",
             "time": "2022-05-17T18:30",
-            "image": "img/alarms/2022_03/2022_03_01.png",
+            "image": "img/alarms/2022_03/2022_03_01.jpeg",
             "word": "H1 (normal), Ölspur",
             "location": "B253",
             "participants": 10,
@@ -47,7 +47,7 @@
             "id": "2022_02",
             "title": "Einsatz 02/2022",
             "time": "2022-04-30T02:49",
-            "image": "img/alarms/2022_02/2021_02_01.png",
+            "image": "img/alarms/2022_02/2021_02_01.jpeg",
             "word": "H1 (normal), Ausleuchten Einsatzstelle für Rettungsdienst",
             "location": "OT Rennertehausen",
             "participants": 11,
@@ -69,7 +69,7 @@
         {
             "id": "2021_08",
             "title": "Einsatz 08/2021",
-            "image": "img/alarms/2021_08/2021_08_03.png",
+            "image": "img/alarms/2021_08/2021_08_03.jpeg",
             "time": "2021-12-02T22:52",
             "word": "H1 (normal) Ölspur auf Verkehrsfläche / TH Nachforderung VU",
             "location": "Allendorf",
@@ -80,7 +80,7 @@
         {
             "id": "2021_07",
             "title": "Einsatz 07/2021",
-            "image": "img/alarms/2021_07/2021_07_02.png",
+            "image": "img/alarms/2021_07/2021_07_02.jpeg",
             "time": "2021-09-06T21:22",
             "word": "H1 Personensuche",
             "location": "Allendorf",
@@ -101,7 +101,7 @@
         {
             "id": "2021_05",
             "title": "Einsatz 05/2021",
-            "image": "img/alarms/2021_05/2021_05_01.png",
+            "image": "img/alarms/2021_05/2021_05_01.jpeg",
             "time": "2021-08-04T21:05",
             "word": "H1 Y Türöffnung",
             "location": "OT Osterfeld",
@@ -112,7 +112,7 @@
         {
             "id": "2021_04",
             "title": "Einsatz 04/2021",
-            "image": "img/alarms/2021_04/2021_04_01.png",
+            "image": "img/alarms/2021_04/2021_04_01.jpeg",
             "time": "2021-07-29T19:10",
             "word": "H1 Y Türöffnung, Grünweg",
             "location": "OT Rennertehausen",
@@ -123,7 +123,7 @@
         {
             "id": "2021_03",
             "title": "Einsatz 03/2021",
-            "image": "img/alarms/2021_03/2021_03_01.png",
+            "image": "img/alarms/2021_03/2021_03_01.jpeg",
             "time": "2021-04-13T14:57",
             "word": "F2 Brand Wohnung, Küchenbrand",
             "location": "OT Allendorf",
@@ -134,7 +134,7 @@
         {
             "id": "2021_02",
             "title": "Einsatz 02/2021",
-            "image": "img/alarms/2021_02/2021_02_05.png",
+            "image": "img/alarms/2021_02/2021_02_05.jpeg",
             "time": "2021-01-26T09:34",
             "word": "H KLEMM 1 Y, VU, LKW",
             "location": "B 253 zwischen Haine & Rennertehausen",
