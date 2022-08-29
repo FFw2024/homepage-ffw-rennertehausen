@@ -10856,4 +10856,13 @@ img.img-banner {
   object-fit: cover;
 }
 
+.carousel-item img {
+  object-fit: contain;
+}
+@media (min-width: 576px) {
+  .carousel-item img {
+    height: 650px;
+  }
+}
+
 /*# sourceMappingURL=custom.css.map */

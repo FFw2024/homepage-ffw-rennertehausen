@@ -39,12 +39,15 @@ if (searchParams) {
     getData()
         .then(data => data[year].find(item => item.id == id))
         .then(item => {
-          document.getElementById('title').innerHTML =
-              `&#220;bung: ${item.title}`;
+          document.getElementById('title').textContent = `Übung: ${item.title}`;
 
-          contentElement.innerHTML = item.description.split('\n')
-                                         .map(line => `<p>${line}</p>`)
-                                         .join('');
+          const lines = item.description.split('\n');
+          lines.forEach(line => {
+            const element = document.createElement('p');
+            element.textContent = line;
+
+            contentElement.appendChild(element);
+          });
         })
   }
 } else {

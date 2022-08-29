@@ -1,4 +1,4 @@
-const searchParams = window.location.search;
+const searchParams = (new URL(window.location)).searchParams;
 
 const urlBase = document.head.baseURI;
 const contentElement = document.getElementById('content');
@@ -23,25 +23,14 @@ function getData() {
   })
 }
 
-if (searchParams) {
-  const entries = searchParams.substring(1).split('&');
-  var values = new Map();
+if (searchParams.has('id')) {
+  const id = searchParams.get('id');
+  const year = id.substring(0, 4);
 
-  entries.forEach(entry => {
-    const parts = entry.split('=');
-    values.set(parts[0], parts[1]);
-  });
+  getData().then(data => data[year].find(item => item.id == id)).then(alarm => {
+    document.getElementById('title').innerText = alarm.title;
 
-  if (values.has('id')) {
-    const id = values.get('id');
-    const year = id.substring(0, 4);
-
-    getData()
-        .then(data => data[year].find(item => item.id == id))
-        .then(alarm => {
-          document.getElementById('title').innerText = alarm.title;
-
-          contentElement.innerHTML = `
+    contentElement.innerHTML = `
             <h3 class="text-muted">${alarm.word}</h3>
             <div class="row">
               <div>
@@ -54,38 +43,60 @@ if (searchParams) {
                         <tr>
                             <th scope='row'>Einsatzzeit</th>
                             <td>${new Date(alarm.time).toLocaleString('de-de', {
-                                year: "numeric",
-                                month: "2-digit",
-                                day: "2-digit",
-                                hour: "2-digit",
-                                minute: "2-digit"
-                            })} Uhr</td>
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit'
+    })} Uhr</td>
                         </tr>
-                        ${alarm.participants ?
-                            `<tr>
+                        ${
+        alarm.participants ? `<tr>
                                 <th scope='row'>Einsatzkr&#228;fte</th>
                                 <td>${alarm.participants}</td>
-                            </tr>` : ''
-                        }
-                        ${alarm.vehicles ?
-                            `<tr>
+                            </tr>` :
+                             ''}
+                        ${
+        alarm.vehicles ? `<tr>
                                 <th scope='row'>Fahrzeuge</th>
                                 <td>${alarm.vehicles}</td>
-                            </tr>`: ''
-                        }
+                            </tr>` :
+                         ''}
                     </tbody>
                 </table>
               </div>
             </div>
             <div className='row'>
             ${
-                alarm.description.split('\n').map((line, index) => `<p class="mb-0">${line}</p>`
-                ).join('')
-            }
+        alarm.description.split('\n')
+            .map((line, index) => `<p class="mb-0">${line}</p>`)
+            .join('')}
             </div>
           `;
-        })
-  }
+  })
+
+  const main = document.getElementsByTagName('main')[0];
+
+  const button = document.createElement('button');
+  button.classList.add('btn', 'btn-primary');
+  button.type = 'button';
+  button.setAttribute('data-bs-toggle', 'modal');
+  button.setAttribute('data-bs-target', '#imageGallery');
+  button.innerText = 'Bildergalerie';
+
+  main.appendChild(button);
+
+  const imageGallery = document.createElement('div');
+  imageGallery.setAttribute('id', 'imageGallery');
+  imageGallery.setAttribute('data-image-src', 'img/alarms');
+
+  main.appendChild(imageGallery);
+
+  const script = document.createElement('script');
+  script.type = 'module';
+  script.src = 'js/misc/imageGallery.js';
+
+  main.appendChild(script);
 } else {
   function getCard(item) {
     return `
@@ -93,12 +104,16 @@ if (searchParams) {
             <div class="card h-100">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        ${item.image ? `<img class="img-fluid rounded-start" src="${item.image}" />` : ''}
+                        ${
+        item.image ?
+            `<img class="img-fluid rounded-start" src="${item.image}" />` :
+            ''}
                     </div>
                     <div class="card-body col-md-8">
                         <h5 class="card-title">${item.title}</h5>
                         <h6 class="card-subtitle text-muted">${item.word}</h6>
-                        <a class="card-link stretched-link" href="einsatzabteilung/einsaetze.html?id=${item.id}"></a>
+                        <a class="card-link stretched-link" href="einsatzabteilung/einsaetze.html?id=${
+        item.id}"></a>
                     </div>
                 </div>
             </div>
@@ -115,8 +130,7 @@ if (searchParams) {
                                             <h3>${year}</h3>
                                             <div class="row row-cols-md-2 g-2 m-2">
 
-                                                ${
-                                              alarms.map(getCard).join('')}
+                                                ${alarms.map(getCard).join('')}
 
                                             </div>
                                         </section>

@@ -31,3 +31,12 @@ img.img-banner{
     object-fit: cover;
 }
 
+.carousel-item {
+    img {
+        object-fit: contain;
+
+        @include media-breakpoint-up(sm) {
+            height: 650px;
+        }
+    }
+}
