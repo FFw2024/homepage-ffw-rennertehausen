@@ -98,44 +98,46 @@ if (searchParams.has('id')) {
 
   main.appendChild(script);
 } else {
-  function getCard(item) {
-    return `
-        <div class="col">
-            <div class="card h-100">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        ${
-        item.image ?
-            `<img class="img-fluid rounded-start" src="${item.image}" />` :
-            ''}
-                    </div>
-                    <div class="card-body col-md-8">
-                        <h5 class="card-title">${item.title}</h5>
-                        <h6 class="card-subtitle text-muted">${item.word}</h6>
-                        <a class="card-link stretched-link" href="einsatzabteilung/einsaetze.html?id=${
-        item.id}"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-          `;
+  function createCards(parent, alarms) {
+    const cardTemplate = document.getElementById('templateCard').content;
+
+    alarms.forEach(alarm => {
+      const card = document.importNode(cardTemplate, true);
+
+      if (alarm.image) {
+        const img = card.querySelector('div.col-md-4 img.img-fluid');
+        img.src = alarm.image;
+      }
+
+      const header = card.querySelector('div.col-md-8 h5.card-title');
+      header.textContent = alarm.title;
+
+      const subHeader =
+          card.querySelector('div.col-md-8 h6.card-subtitle.text-muted');
+      subHeader.textContent = alarm.word;
+
+      const link = card.querySelector('div.col-md-8 a.card-link');
+      link.href = `${urlBase}einsatzabteilung/einsaetze.html?id=${alarm.id}`;
+
+      parent.appendChild(card);
+    });
   }
 
   getData().then(data => {
-    contentElement.innerHTML = Object.entries(data)
-                                   .reverse()
-                                   .map(([year, alarms]) => {
-                                     return `
-                                        <section>
-                                            <h3>${year}</h3>
-                                            <div class="row row-cols-md-2 g-2 m-2">
+    Object.entries(data).reverse().forEach(([year, alarms]) => {
+      const section = document.createElement('section');
 
-                                                ${alarms.map(getCard).join('')}
+      const header = document.createElement('h3');
+      header.innerText = year;
+      section.appendChild(header);
 
-                                            </div>
-                                        </section>
-                                        `;
-                                   })
-                                   .join('');
+      const list = document.createElement('div');
+      list.classList.add('row', 'row-cols-md-2', 'g-2', 'm-2');
+
+      createCards(list, alarms);
+      section.appendChild(list);
+
+      contentElement.appendChild(section);
+    });
   })
 }

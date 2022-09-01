@@ -48,45 +48,44 @@ if (searchParams) {
               Accept: 'text/html',
             },
             mode: 'no-cors'
-          }).then(res => {
-            if (!res.ok) {
-              console.log(res);
-              throw res.statusText;
-            }
+          })
+              .then(res => {
+                if (!res.ok) {
+                  console.log(res);
+                  throw res.statusText;
+                }
 
-            return res.text();
-          }).then(html => contentElement.innerHTML = html);
+                return res.text();
+              })
+              .then(html => contentElement.append(html));
         });
   }
 
 } else {
-  function getCard(news) {
-    const link = `${urlBase}aktuelles.html?id=${news.id}`;
+  function createCards(parent, news) {
+    const template = document.getElementById('templateCard').content;
+    
+    news.forEach((item) => {
+      const link = `${urlBase}aktuelles.html?id=${news.id}`;
 
-    let result = `
-      <div class="col">
-        <div class="card mb-3">
-          <div class="row g-0">
-            <div class="col-md-4">
-              ${
-        news.icon ?
-            `<img src="${news.icon}" class="img-fluid rounded-start" />` :
-            ``}
-            </div>
-            <div class="col-md-8 card-body">
-              <div class="d-flex flex-column h-100">
-                <h5 class="card-title">${news.title}</h5>
-                <p class="card-text overflow-hidden">${news.description}</p>
-                <a class="card-link mt-auto align-self-end" href="${
-        link}">weiterlesen</a>
-              </div>  
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
+      const card = document.importNode(template, true);
 
-    return result;
+      if (item.image) {
+        const img = card.querySelector('div.col-md-4 img');
+        img.src = item.image;
+      }
+
+      const header = card.querySelector('div.col-md-8 h5.card-title');
+      header.innerText = item.title;
+
+      const desc = card.querySelector('div.col-md-8 p.card-text.overflow-hidden');
+      desc.innerText = item.description;
+
+      const cardLink = card.querySelector('div.col-md-8 a.card-link');
+      cardLink.href = link;
+
+      parent.appendChild(card);
+    });
   }
 
   getData().then(createList);
@@ -95,9 +94,7 @@ if (searchParams) {
     let newsList = document.getElementById('newsList');
 
     if (newsList) {
-      newsList.innerHTML = json.filter((element) => element.display ?? true)
-                               .map(getCard)
-                               .join('');
+      createCards(newsList, json);
     }
   }
 }

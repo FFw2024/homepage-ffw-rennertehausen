@@ -21,32 +21,73 @@ function createElement(parent, tagName, classNames = [], attributes = {}) {
 }
 
 const modalElement = document.getElementById('imageGallery');
-modalElement.classList.add('modal', 'fade');
 
-// init image gallery
-const dialogNode = createElement(
-    modalElement, 'div', ['modal-dialog', 'modal-xl', 'modal-dialog-centered']);
-const contentNode = createElement(dialogNode, 'div', ['modal-content']);
+function createModal(images, imageSrc) {
+  modalElement.classList.add('modal', 'fade');
 
-// modal header with close button
-const headerNode = createElement(contentNode, 'div', ['modal-header']);
+  // init image gallery
+  const dialogNode = createElement(
+      modalElement, 'div',
+      ['modal-dialog', 'modal-xl', 'modal-dialog-centered']);
+  const contentNode = createElement(dialogNode, 'div', ['modal-content']);
 
-// init close button
-const closeButton = createElement(
-    headerNode, 'button', ['btn-close'],
-    {'data-bs-dismiss': 'modal', 'aria-label': 'Close'});
-closeButton.type = 'button';
+  // modal header with close button
+  const headerNode = createElement(contentNode, 'div', ['modal-header']);
 
-// modal body
-const bodyNode = createElement(contentNode, 'div', ['modal-body']);
+  // init close button
+  const closeButton = createElement(
+      headerNode, 'button', ['btn-close'],
+      {'data-bs-dismiss': 'modal', 'aria-label': 'Close'});
+  closeButton.type = 'button';
 
-// image carousel
-const carousel = createElement(
-    bodyNode, 'div', ['carousel' ,'carousel-dark', 'slide'],
-    {'id': 'imageCarousel', 'data-bs-ride': 'carousel'});
+  // modal body
+  const bodyNode = createElement(contentNode, 'div', ['modal-body']);
 
-const carouselInner = createElement(carousel, 'div', ['carousel-inner']);
+  // image carousel
+  const carousel = createElement(
+      bodyNode, 'div', ['carousel', 'carousel-dark', 'slide'],
+      {'id': 'imageCarousel', 'data-bs-ride': 'carousel'});
 
+  const carouselInner = createElement(carousel, 'div', ['carousel-inner']);
+
+  images.forEach((image, index) => {
+    const carouselItem = createElement(
+        carouselInner, 'div',
+        index == 0 ? ['carousel-item', 'active'] : ['carousel-item']);
+    createElement(
+        carouselItem, 'img', ['d-block', 'w-100'],
+        {'src': `${imageSrc}/${image.filename}`});
+  });
+
+  // carousel buttons and indicators
+  const buttonPrev =
+      createElement(carousel, 'button', ['carousel-control-prev'], {
+        'type': 'button',
+        'data-bs-target': '#imageCarousel',
+        'data-bs-slide': 'prev'
+      });
+
+  createElement(
+      buttonPrev, 'span', ['carousel-control-prev-icon'],
+      {'aria-hidden': 'true'});
+  const labelButtonPrev =
+      createElement(buttonPrev, 'span', ['visually-hidden']);
+  labelButtonPrev.textContent = 'Previous';
+
+  const buttonNext =
+      createElement(carousel, 'button', ['carousel-control-next'], {
+        'type': 'button',
+        'data-bs-target': '#imageCarousel',
+        'data-bs-slide': 'next'
+      });
+
+  createElement(
+      buttonNext, 'span', ['carousel-control-next-icon'],
+      {'aria-hidden': 'true'});
+  const labelButtonNext =
+      createElement(buttonNext, 'span', ['visually-hidden']);
+  labelButtonNext.textContent = 'Next';
+}
 // add images
 const searchParams = (new URL(window.location)).searchParams;
 const urlPath = modalElement.getAttribute('data-image-src');
@@ -62,42 +103,8 @@ if (urlPath && searchParams) {
     console.log(res);
     throw res.statusText;
   }
-
-  const images = await res.json();
-  images.forEach((image, index) => {
-    const carouselItem = createElement(
-        carouselInner, 'div',
-        index == 0 ? ['carousel-item', 'active'] : ['carousel-item']);
-    createElement(
-        carouselItem, 'img', ['d-block', 'w-100'],
-        {'src': `${imgSrc}/${image.filename}`});
-  });
+  else {
+    const images = await res.json();
+    createModal(images, imgSrc);
+  }
 }
-
-
-// carousel buttons and indicators
-const buttonPrev =
-    createElement(carousel, 'button', ['carousel-control-prev'], {
-      'type': 'button',
-      'data-bs-target': '#imageCarousel',
-      'data-bs-slide': 'prev'
-    });
-
-createElement(
-    buttonPrev, 'span', ['carousel-control-prev-icon'],
-    {'aria-hidden': 'true'});
-const labelButtonPrev = createElement(buttonPrev, 'span', ['visually-hidden']);
-labelButtonPrev.textContent = 'Previous';
-
-const buttonNext =
-    createElement(carousel, 'button', ['carousel-control-next'], {
-      'type': 'button',
-      'data-bs-target': '#imageCarousel',
-      'data-bs-slide': 'next'
-    });
-
-createElement(
-    buttonNext, 'span', ['carousel-control-next-icon'],
-    {'aria-hidden': 'true'});
-const labelButtonNext = createElement(buttonNext, 'span', ['visually-hidden']);
-labelButtonNext.textContent = 'Next';

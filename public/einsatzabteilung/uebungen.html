@@ -74,16 +74,25 @@
 
         <div id="content">
 
-        </div>
-
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageGallery">Bildergalerie</button>        
-
-        <div id="imageGallery" data-image-src="img/exercises">
-            
-        </div>
+        </div>        
         
-        <script type="text/javascript" src="js/einsatzabteilung/uebungen.js"></script>
-        <script type="module" src="js/misc/imageGallery.js"></script>
+        <template id="templateCard">
+            <div class="col">        
+                <div class="card h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img class="img-fluid rounded-start" />                     
+                        </div>
+                        <div class="card-body col-md-8">
+                            <h5 class="card-title"></h5>
+                            <a class="card-link stretched-link"></a>
+                        </div>
+                    </div>
+                </div>   
+            </div> 
+        </template>
+
+        <script type="text/javascript" src="js/einsatzabteilung/uebungen.js"></script>        
     </main>
     <!-- footer -->
     <footer class="fixed-bottom bg-dark container-fluid">

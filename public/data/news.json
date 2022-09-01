@@ -7,19 +7,19 @@
     {
         "title": "Feuerwehr- und Heimatfest 2022",
         "id": "2022_03",
-        "icon": "img/news/fest2022/banner.jpeg",
+        "image": "img/news/fest2022/banner.jpeg",
         "description": "In diesem Jahr ist es endlich wieder soweit! Das traditionelle Heimat- und Feuerwehrfest in Rennertehausen wird nach 3 Jahren mit Einschränkungen durch die Corona-Pandemie wieder stattfinden."
     },
     {
         "title": "Osterfeuer 2022",
         "id": "2022_02",
-        "icon": "img/news/2022_02/2022_02_01.jpeg",
+        "image": "img/news/2022_02/2022_02_01.jpeg",
         "description": "In diesem Jahr laden wir euch wieder herzlich zu unserem Osterfeuer ein."
     },
     {
         "title": "Einrichtung einer Unterkunft für Geflüchtete",
         "id": "2022_01",
-        "icon": "img/news/2022_01/2022_01_01.jpeg",
+        "image": "img/news/2022_01/2022_01_01.jpeg",
         "description": "Am Samstag, den 19.03.2022 haben wir zusammen mit den Feuerwehren der Gemeinde Allendorf zusammen eine Unterkunft für Geflüchtete aus der Ukraine eingerichtet."
     }
 ]

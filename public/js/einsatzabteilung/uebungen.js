@@ -23,6 +23,7 @@ function getData() {
   })
 }
 
+
 if (searchParams) {
   const entries = searchParams.substring(1).split('&');
   var values = new Map();
@@ -49,44 +50,66 @@ if (searchParams) {
             contentElement.appendChild(element);
           });
         })
+
+    const main = document.getElementsByTagName('main')[0];
+
+    const button = document.createElement('button');
+    button.classList.add('btn', 'btn-primary');
+    button.type = 'button';
+    button.setAttribute('data-bs-toggle', 'modal');
+    button.setAttribute('data-bs-target', '#imageGallery');
+    button.innerText = 'Bildergalerie';
+
+    main.appendChild(button);
+
+    const imageGallery = document.createElement('div');
+    imageGallery.setAttribute('id', 'imageGallery');
+    imageGallery.setAttribute('data-image-src', 'img/exercises');
+
+    main.appendChild(imageGallery);
+
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = 'js/misc/imageGallery.js';
+
+    main.appendChild(script);
   }
 } else {
-  function getCard(item) {
-    return `
-        <div class="col">        
-            <div class="card h-100">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img class="img-fluid rounded-start" src="${
-        item.image}" />                     
-                    </div>
-                    <div class="card-body col-md-8">
-                        <h5 class="card-title">${item.title}</h5>
-                        <a class="card-link stretched-link" href="einsatzabteilung/uebungen.html?id=${
-        item.id}"></a>
-                    </div>
-                </div>
-            </div>   
-        </div>     
-          `;
+  function createCards(parent, exercises) {
+    const cardTemplate = document.getElementById('templateCard').content;
+
+    exercises.forEach((exercise) => {
+      const card = document.importNode(cardTemplate, true);
+
+      if (exercise.image) {
+        const imageElement = card.querySelector('div.col-md-4 img.img-fluid');
+        imageElement.src = exercise.image;
+      }
+
+      const hearderElement = card.querySelector('div.col-md-8 h5.card-title');
+      hearderElement.textContent = exercise.title;
+
+      const linkElement = card.querySelector('div.col-md-8 a.card-link');
+      linkElement.href =
+          `${urlBase}einsatzabteilung/uebungen.html?id=${exercise.id}`;
+
+      parent.appendChild(card);
+    })
   }
 
-  getData().then(data => {
-    contentElement.innerHTML = Object.entries(data)
-                                   .reverse()
-                                   .map(([year, exercises]) => {
-                                     return `
-                                        <section>
-                                            <h3>${year}</h3>
-                                            <div class="row row-cols-md-2 g-2 m-2">
-                                                
-                                                ${
-                                         exercises.map(getCard).join('')}
+  getData().then(
+      data => {Object.entries(data).reverse().forEach(([year, exercises]) => {
+        const section = document.createElement('section');
+        contentElement.appendChild(section);
 
-                                            </div>                                            
-                                        </section>
-                                        `;
-                                   })
-                                   .join('');
-  })
+        const header = document.createElement('h3');
+        header.textContent = year;
+        section.appendChild(header);
+
+        const list = document.createElement('div');
+        list.classList.add('row', 'row-cols-md-2', 'g-2', 'm-2');
+        section.appendChild(list);
+
+        createCards(list, exercises);
+      })});
 }
