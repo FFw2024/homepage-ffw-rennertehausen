@@ -49,24 +49,29 @@ if (searchParams) {
             },
             mode: 'no-cors'
           })
-              .then(res => {
-                if (!res.ok) {
-                  console.log(res);
-                  throw res.statusText;
-                }
+            .then(res => {
+              if (!res.ok) {
+                console.log(res);
+                throw res.statusText;
+              }
 
-                return res.text();
-              })
-              .then(html => contentElement.append(html));
+              return res.text();
+            })
+            .then(html => {
+              let parser = new DOMParser();
+
+              const doc = parser.parseFromString(html, 'text/html');
+              doc.body.childNodes.forEach(node => contentElement.appendChild(node));
+            });
         });
   }
 
 } else {
   function createCards(parent, news) {
     const template = document.getElementById('templateCard').content;
-    
+
     news.forEach((item) => {
-      const link = `${urlBase}aktuelles.html?id=${news.id}`;
+      const link = `${urlBase}aktuelles.html?id=${item.id}`;
 
       const card = document.importNode(template, true);
 

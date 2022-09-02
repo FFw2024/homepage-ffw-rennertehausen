@@ -17,7 +17,7 @@ fetch(`${urlBase}data/alarms.json`, {
       const year = Object.entries(alarms)
                        .map(([year, _]) => Number.parseInt(year))
                        .reduce((prev, curr) => prev < curr ? curr : prev);
-      
+
       return alarms[year].reduce((prev, curr) => {
         const prevTime = new Date(prev.time);
         const currTime = new Date(curr.time);
@@ -36,6 +36,9 @@ fetch(`${urlBase}data/alarms.json`, {
 
       const subtitle = card.querySelector('div h6.card-subtitle');
       subtitle.textContent = alarm.word;
+
+      const link = card.querySelector('div a.card-link');
+      link.href = `${urlBase}einsatzabteilung/einsaetze.html?id=${alarm.id}`;
     })
 
 // get events
