@@ -10865,4 +10865,9 @@ img.img-banner {
   }
 }
 
+header {
+  position: relative;
+  z-index: 1000;
+}
+
 /*# sourceMappingURL=custom.css.map */

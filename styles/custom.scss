@@ -3,40 +3,45 @@ $enable-negative-margins: true;
 @import '../public/styles/bootstrap/scss/bootstrap.scss';
 
 main {
-    margin-bottom: 96px;
-    max-width: 960px !important;
+  margin-bottom: 96px;
+  max-width: 960px !important;
 }
 
-nav>div.container {
-    max-width: 960px !important;
+nav > div.container {
+  max-width: 960px !important;
 }
 
 @include media-breakpoint-down(sm) {
-    main{
-        margin-bottom: 144px;
-    }
+  main {
+    margin-bottom: 144px;
+  }
 }
 
 .row > table {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    margin-top: var(--bs-gutter-y);
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
 }
 
-img.img-banner{
-    max-height: 10rem;
-    object-fit: cover;
+img.img-banner {
+  max-height: 10rem;
+  object-fit: cover;
 }
 
 .carousel-item {
-    img {
-        object-fit: contain;
+  img {
+    object-fit: contain;
 
-        @include media-breakpoint-up(sm) {
-            height: 650px;
-        }
+    @include media-breakpoint-up(sm) {
+      height: 650px;
     }
+  }
+}
+
+header {
+    position: relative;
+    z-index: 1000;
 }
