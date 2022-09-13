@@ -100,6 +100,14 @@ if (urlPath && searchParams) {
   var res = await fetch(`${imgSrc}/images.json`)
 
   if (!res.ok) {
+    if (res.status == 404) {
+      const button =
+          document.querySelector('[data-bs-target="#imageGallery"]');
+      if (button) {
+        button.classList.add('invisible')
+      }
+    }
+
     console.log(res);
     throw res.statusText;
   }

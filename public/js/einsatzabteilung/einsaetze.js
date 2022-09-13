@@ -28,53 +28,90 @@ if (searchParams.has('id')) {
   const year = id.substring(0, 4);
 
   getData().then(data => data[year].find(item => item.id == id)).then(alarm => {
-    document.getElementById('title').innerText = alarm.title;
+    document.getElementById('title').innerText = alarm.title;    
 
-    contentElement.innerHTML = `
-            <h3 class="text-muted">${alarm.word}</h3>
-            <div class="row">
-              <div>
-                <table className="table table-borderless w-auto">
-                    <tbody>
-                        <tr>
-                            <th scope="row">Einsatzort</th>
-                            <td>${alarm.location}</td>
-                        </tr>
-                        <tr>
-                            <th scope='row'>Einsatzzeit</th>
-                            <td>${new Date(alarm.time).toLocaleString('de-de', {
+    const header = document.createElement('h3');
+    header.classList.add('text-muted');
+    header.textContent = alarm.word;
+    contentElement.appendChild(header);
+
+    // row for the table
+    const divRowTable = document.createElement('div');
+    divRowTable.classList.add('row');
+    contentElement.appendChild(divRowTable);
+
+    // div to align table on left side
+    const tableDiv = document.createElement('div');
+    divRowTable.appendChild(tableDiv);
+
+    // table with information about the alarm
+    const table = document.createElement('table');
+    table.classList.add('table', 'table-borderless', 'w-auto');
+    tableDiv.appendChild(table);
+
+    const tableBody = document.createElement('tbody');
+    table.appendChild(tableBody);
+
+    function createTableRow(title, desc) {
+      const tableRow = document.createElement('tr');
+
+      const th = document.createElement('th');
+      th.scope = 'row';
+      th.textContent = title;
+      th.classList.add('pe-4');
+      tableRow.appendChild(th);
+
+      const td = document.createElement('td');
+      td.innerHTML = desc;
+      tableRow.appendChild(td);
+
+      tableBody.appendChild(tableRow);
+    }
+
+    createTableRow('Einsatzort', alarm.location);
+    createTableRow('Einsatzzeit', new Date(alarm.time).toLocaleString('de-de', {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
       hour: '2-digit',
       minute: '2-digit'
-    })} Uhr</td>
-                        </tr>
-                        ${
-        alarm.participants ? `<tr>
-                                <th scope='row'>Einsatzkr&#228;fte</th>
-                                <td>${alarm.participants}</td>
-                            </tr>` :
-                             ''}
-                        ${
-        alarm.vehicles ? `<tr>
-                                <th scope='row'>Fahrzeuge</th>
-                                <td>${alarm.vehicles}</td>
-                            </tr>` :
-                         ''}
-                    </tbody>
-                </table>
-              </div>
-            </div>
-            <div className='row'>
-            ${
-        alarm.description.split('\n')
-            .map((line, index) => `<p class="mb-0">${line}</p>`)
-            .join('')}
-            </div>
-          `;
-  })
+    }));
+    createTableRow('Einsatzkräfte', alarm.participants);
+    createTableRow('Fahrzeuge', alarm.vehicles);
+    if (alarm.duration) {
+      createTableRow('Einsatzdauer', alarm.duration);
+    }
 
+    const divDesc = document.createElement('div');
+    divDesc.classList.add('row');
+
+    alarm.description.split('\n').forEach(line => {
+      const p = document.createElement('p');
+      // p.classList.add('mb-0');
+      p.innerHTML = line;
+
+      divDesc.appendChild(p);
+    });
+    contentElement.append(divDesc);
+
+    if (alarm.links) {
+      alarm.links.forEach((link) => {
+        const linkDiv = document.createElement('div');
+        linkDiv.classList.add('d-flex', 'justify-content-end');
+
+        const a = document.createElement('a');
+        a.classList.add('text-decoration-none')
+        a.href = link.href;
+        a.innerText = link.desc;
+        a.target = "_blank";
+        a.rel = "noreferrer noopener";
+
+        linkDiv.appendChild(a);
+        divDesc.appendChild(linkDiv);
+      });
+    }
+  });
+    
   const main = document.getElementsByTagName('main')[0];
 
   const button = document.createElement('button');
