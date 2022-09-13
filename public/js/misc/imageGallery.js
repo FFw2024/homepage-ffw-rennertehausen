@@ -48,11 +48,20 @@ function createModal(images, imageSrc) {
       bodyNode, 'div', ['carousel', 'carousel-dark', 'slide'],
       {'id': 'imageCarousel', 'data-bs-ride': 'carousel'});
 
+  const carouselIndicators = createElement(carousel, 'div', ['carousel-indicators']);
   const carouselInner = createElement(carousel, 'div', ['carousel-inner']);
 
   images.forEach((image, index) => {
-    const carouselItem = createElement(
-        carouselInner, 'div',
+    // indicator
+    createElement(carouselIndicators, 'button', index == 0 ? ['active'] : [], 
+    {
+      type: "button",
+      "data-bs-target": "#imageCarousel",
+      "data-bs-slide-to": index,
+    });
+
+    // carousel item
+    const carouselItem = createElement(carouselInner, 'div',
         index == 0 ? ['carousel-item', 'active'] : ['carousel-item']);
     createElement(
         carouselItem, 'img', ['d-block', 'w-100'],
@@ -101,8 +110,7 @@ if (urlPath && searchParams) {
 
   if (!res.ok) {
     if (res.status == 404) {
-      const button =
-          document.querySelector('[data-bs-target="#imageGallery"]');
+      const button = document.querySelector('[data-bs-target="#imageGallery"]');
       if (button) {
         button.classList.add('invisible')
       }
