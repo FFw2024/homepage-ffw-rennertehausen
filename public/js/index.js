@@ -60,10 +60,13 @@ fetch(`${urlBase}data/events.json`, {
                        .querySelector('div.card-body div.list-group');
 
       events.forEach(event => {
-        if (event.display == undefined || event.display) {
+        const display = (event.display == undefined || event.display) &&
+            (event.displayUntil ? new Date(event.displayUntil) > Date.now() :
+                                  true);
+        if (display) {
           var a = document.importNode(template.content, true);
           const link = a.querySelector('a');
-          link.setAttribute('href', event.link);
+          link.setAttribute('href', event.link ? event.link : '');
 
           const strong = a.querySelector('strong');
           strong.textContent = event.time;

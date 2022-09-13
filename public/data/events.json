@@ -1,8 +1,12 @@
 [
     {
+        "title": "Landesentscheid in Pfungstadt",
+        "time": "25.09.2022",
+        "displayUntil": "2022-09-26T00:00"
+    },
+    {
         "title": "Jahreshauptversammlung am Gerätehaus",
         "time": "22.10.2022 19 Uhr",
-        "link": "aktuelles/jhv2022",
-        "display": false
+        "displayUntil": "2022-10-23T00:00"
     }
 ]
