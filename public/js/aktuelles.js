@@ -38,11 +38,9 @@ if (searchParams) {
           document.getElementById('newsList').className += ' invisible';
 
           const contentElement = document.getElementById('content');
-          contentElement.className = '';
+          contentElement.className = '';          
 
-          const year = item.id.substring(0, 4);
-
-          fetch(`${urlBase}aktuelles/${year}/${item.id}.html`, {
+          fetch(`${urlBase}aktuelles/${item.id}.html`, {
             method: 'GET',
             headers: {
               Accept: 'text/html',
