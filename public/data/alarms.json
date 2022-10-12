@@ -1,6 +1,22 @@
 {
     "2022": [
         {
+            "id": "2022_08",
+            "title": "Einsatz 08/2022",
+            "time": "2022-10-12T09:05",
+            "word": "H KLEMM 1 Y",
+            "location": "B253 zwischen Battenberg und Laisa",
+            "vehicles": "LF 8/6, MTF",
+            "duration": "3h",
+            "description": "Weitere Infos folgen",
+            "links": [
+                {
+                    "href": "https://112-magazin.de/waldeck-frankenberg/kb-polizei/item/34588-schwerer-frontalzusammenstoss-auf-der-bundesstrasse-253",
+                    "desc": "Artikel im 112 Magazin"
+                }
+            ]
+        },
+        {
             "id": "2022_07",
             "title": "Einsatz 07/2022",
             "time": "2022-09-10T18:53",
