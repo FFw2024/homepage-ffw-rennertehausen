@@ -26,11 +26,15 @@
             ],
             "participants": 14,
             "duration": 3.5,
-            "description": "Weitere Infos folgen",
+            "description": "Am gestrigen Morgen wurden wir um kurz nach 9 Uhr zu einem Verkehrsunfall in der Viessmannstraße alarmiert. Noch auf der Anfahrt teilte uns die Leitstelle mit, dass sich der Unfall zwischen Battenberg und Laisa ereignet hat. Beim Eintreffen an der Einsatzstelle stellte sich herraus, dass eine Person stark eingeklemmt ist.\nWir haben sofort mit der Rettung der Person begonnen. Zusammen mit der <a class=\"text-decoration-none\" target=\"_blank\" rel=\"noreferrer noopener\" href=\"http://www.ffw-battenberg.de/\">Feuerwehr Battenberg</a>, die aufgrund des zuerst angenommenen Unfalls in Allendorf erst später alamiert wurde, und den Kräften der beiden RTW sowie der Hubschrauberbesatzung, haben wir die Person aus dem Fahrzeug befreien können.\nMit im Einsatz waren außerdem die <a class=\"text-decoration-none\" target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://www.feuerwehr-allendorf-eder.de\">Feuerwehr Allendorf</a>, das DRK, zwei Rettungshubsrauber und die Polizei.",
             "links": [
                 {
                     "href": "https://112-magazin.de/waldeck-frankenberg/kb-polizei/item/34588-schwerer-frontalzusammenstoss-auf-der-bundesstrasse-253",
                     "desc": "Artikel im 112 Magazin"
+                },
+                {
+                    "href": "https://www.hna.de/lokales/frankenberg/battenberg-eder-ort305268/zwei-schwerverletzte-nach-riskantem-ueberholmanoever-bei-laisa-91845799.html?itm_source=story_detail&itm_medium=interaction_bar&itm_campaign=share",
+                    "desc": "Artikel in der HNA"
                 }
             ]
         },
@@ -230,7 +234,7 @@
             "word": "F3 Industriebrand",
             "location": "OT Allendorf, Viessmannstraße",
             "participants": 10,
-            "vehicles": 
+            "vehicles":
             [
                 {
                     "desc": "LF 8/6, Rüstanhänger",
