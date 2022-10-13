@@ -77,9 +77,15 @@ if (searchParams.has('id')) {
       minute: '2-digit'
     }));
     createTableRow('Einsatzkräfte', alarm.participants);
-    createTableRow('Fahrzeuge', alarm.vehicles);
+    createTableRow('Fahrzeuge', alarm.vehicles.map(item => {
+      if (item.href) {
+        return `<a class="text-decoration-none" target="_blank" rel="noreferrer noopener" href="${item.href}">${item.desc}</a>`;
+      }
+      
+      return item.desc;
+    }).join(', '));
     if (alarm.duration) {
-      createTableRow('Einsatzdauer', alarm.duration);
+      createTableRow('Einsatzdauer', `${alarm.duration} Stunden`.replace('.', ','));
     }
 
     const divDesc = document.createElement('div');
