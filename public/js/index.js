@@ -1,5 +1,23 @@
 const urlBase = document.head.baseURI;
 
+function formatEventTime(time) {  
+  if (time.getMinutes() == 0) {
+    if (time.getHours() == 0) {
+      return Intl.DateTimeFormat('de-DE', {
+        year: "numeric", month:'2-digit', day:"2-digit"
+      }).format(time);
+    }
+    
+    return Intl.DateTimeFormat('de-DE', {
+      year: "numeric", month:'2-digit', day:"2-digit", hour: "numeric"
+    }).format(time);
+  }
+
+  return Intl.DateTimeFormat('de-DE', {
+    year: "numeric", month:'2-digit', day:"2-digit", hour: "numeric", minute: "2-digit"
+  }).format(time);
+}
+
 // get latest alarm
 fetch(`${urlBase}data/alarms.json`, {
   method: 'GET',
@@ -69,7 +87,7 @@ fetch(`${urlBase}data/events.json`, {
           link.setAttribute('href', event.link ? event.link : '');
 
           const strong = a.querySelector('strong');
-          strong.textContent = event.time;
+          strong.textContent = formatEventTime(new Date(event.time))
 
           const span = a.querySelector('span');
           span.textContent = ` ${event.title}`;
