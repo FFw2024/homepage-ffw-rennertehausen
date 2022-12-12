@@ -1,0 +1,77 @@
+[
+    {
+        "id": "2023_01",
+        "desc": "Unfallverhütungsvorschriften",
+        "date": "2023-01-12T19:00"
+    },
+    {
+        "id": "2023_02",
+        "desc": "Erste Hilfe Unterweisung",
+        "date": "2023-01-26T19:00"
+    },
+    {
+        "id": "2023_03",
+        "desc": "THVU Großübung",
+        "date": "2023-02-04T09:00"
+    },
+    {
+        "id": "2023_04",
+        "desc": "Knotenkunde",
+        "date": "2023-02-16T19:00"
+    },
+    {
+        "id": "2023_05",
+        "desc": "FWDV 3",
+        "date": "2023-03-02T19:00"
+    },
+    {
+        "id": "2023_06",
+        "desc": "FWDV 3",
+        "date": "2023-03-16T19:00"
+    },
+    {
+        "id": "2023_07",
+        "desc": "Höhenrettung / Abseilen von Personen",
+        "date": "2023-03-30T19:00"
+    },
+    {
+        "id": "2023_08",
+        "desc": "Gemeinsames Aufräumen fürs Osterfeuer",
+        "date": "2023-04-05T19:00"
+    },
+    {
+        "id": "2023_09",
+        "desc": "FWDV 3",
+        "date": "2023-04-13T19:00"
+    },
+    {
+        "id": "2023_10",
+        "desc": "FWDV 3",
+        "date": "2023-04-27T19:00"
+    },
+    {
+        "id": "2023_11",
+        "desc": "FWDV 3",
+        "date": "2023-05-11T19:00"
+    },
+    {
+        "id": "2023_12",
+        "desc": "GAMS",
+        "date": "2023-05-25T19:00"
+    },
+    {
+        "id": "2023_13",
+        "desc": "FWDV 10",
+        "date": "2023-06-08T19:00"
+    },
+    {
+        "id": "2023_14",
+        "desc": "FWDV 3 Wasserentnahme offenes Gewässer",
+        "date": "2023-06-22T19:00"
+    },
+    {
+        "id": "2023_15",
+        "desc": "Gerätekunde + Aufräumen für den Sommer",
+        "date": "2023-07-13T19:00"
+    }
+]

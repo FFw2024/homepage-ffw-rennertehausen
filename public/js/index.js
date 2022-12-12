@@ -80,7 +80,7 @@ fetch(`${urlBase}data/events.json`, {
       events.forEach(event => {
         const display = (event.display == undefined || event.display) &&
             (event.displayUntil ? new Date(event.displayUntil) > Date.now() :
-                                  true);
+                                  new Date(event.time) > Date.now());
         if (display) {
           var a = document.importNode(template.content, true);
           const link = a.querySelector('a');
@@ -136,3 +136,22 @@ fetch(`${urlBase}data/news.json`)
         i++;
       }
     })
+
+// get next exercise
+fetch(`${urlBase}data/nextExercises.json`)
+  .then(res => {
+    if (!res.ok) {
+      console.log(res);
+      throw res.statusText;
+    }
+
+    return res.json();
+  })
+  .then(data=> {
+    const exercise = data.find(element => new Date(element.date) >= Date.now());
+
+    // set card text
+    const exerciseCard = document.getElementById('nextExerciseCard');
+    exerciseCard.querySelector('div h5.card-title').textContent = formatEventTime(new Date(exercise.date));
+    exerciseCard.querySelector('div h6.card-subtitle').textContent = exercise.desc;
+  })
