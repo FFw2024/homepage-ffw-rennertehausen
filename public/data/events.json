@@ -1,14 +1,22 @@
 [
+    {        
+        "title": "Jahresabschluss 2022",
+        "time": "2023-12-27T00:00",
+        "link": "aktuelles.html?id=jahresabschluss2022"
+    },
     {
         "title": "Jahreshauptversammlung Gemeinde",
-        "time": "2023-03-04T19:00"
+        "time": "2023-03-04T19:00",
+        "display": false
     },
     {
         "title": "Jahreshauptversammlung 2022",
-        "time": "2023-03-18T19:00"
+        "time": "2023-03-18T19:00",
+        "display": false
     },
     {
         "title": "Osterfeuer",
-        "time": "2023-04-08T19:00"
+        "time": "2023-04-08T19:00",
+        "display": false
     }
 ]
