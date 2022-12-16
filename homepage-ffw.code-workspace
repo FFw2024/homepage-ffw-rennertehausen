@@ -16,6 +16,7 @@
             "**/package-lock.json": true
         },
         "liveServer.settings.root": "/public",
+        "liveServer.settings.useLocalIp": true,
         "css.styleSheets": [
             "/public/styles/custom.css"
         ]
