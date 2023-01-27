@@ -1,4 +1,26 @@
 {
+    "2023": [
+    	{
+		"id": "2023_01",
+		"title": "Einsatz 01/2023",
+		"time": "2023-01-24T06:19",
+		"word": "F RWM",
+		"location": "Rennertehausen",
+		"vehicles": [
+			{
+				"desc": "LF 8/6",
+				"href": "/einsatzabteilung/fahrzeuge.html#lf86"
+			},
+			{
+				"desc": "MTF",
+				"href": "/einsatzabteilung/fahrzeuge.html#mtf"
+			}
+		],
+		"participants": 13,
+		"duration": "1",
+		"description": "Am Dienstagmorgen wurden wir zu einem ausgelösten Rauchwarnmelder (RWM) alarmiert. Bei Eintreffen stellte sich herraus, dass sich dieser nicht wie üblich ein einer Wohnung, sondern in einem Wohnmobil befand, das in einer Scheune abgestellt war.\nNachdem wir uns Zugang zur scheune verschafft hatten, konnten wir keine Rauchentwicklung feststellen.\nAls der Besitzer des Wohnmobils eintraf, wurde der Innenraum unter Einsatz der Wärmebildkamera kontrolliert. Da auch hier nichts festgestellt werden konnte, sind wir wieder abgerückt."
+	}
+    ],
     "2022": [
         {
             "id": "2022_08",
