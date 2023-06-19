@@ -1,7 +1,7 @@
 const table = document.getElementById("tableBody")
 
 function createRow(date, time, desc) {
-    const row = document.createElement('tr');
+    const row = document.createElement('tr');    
 
     const dateCol = document.createElement('td');
     dateCol.innerText = date;
@@ -33,9 +33,9 @@ fetch('data/nextExercises.json')
     .then(async (res) => {
         const data = await res.json();
 
-        data.forEach((item) => {
+        data.filter((item) => new Date(item.date) > Date.now()).forEach((item) => {
             const date = new Date(item.date);
 
-            createRow(date.toLocaleDateString('de-de', dateFormatOptions), date.toLocaleTimeString('de-de', timeFormatOptions) + " Uhr", item.desc)
+            createRow(date.toLocaleDateString('de-de', dateFormatOptions), date.toLocaleTimeString('de-de', timeFormatOptions) + " Uhr", item.desc, )
         });
     });
