@@ -8,3 +8,6 @@ out
 # images
 public/img
 public/files
+
+# secrets
+secrets/

@@ -11,4 +11,22 @@ jobs:
   create_backup_job:
     runs-on: 'ubuntu-latest'
     steps:
-      - run: ssh feuerwehr-rennertehausen@ssh.strato.de ./createBackup.sh
+      - name: Configure SSH
+        run: |
+          mkdir ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/server.key
+          chmod 600 ~/.ssh/server.key
+          cat >> ~/.ssh/config << END
+          HOST server
+            HostName $SSH_HOST
+            User: $SSH_USER
+            IdentityFile ~/.ssh/server.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_USER: ${{secrets.SSH_USER}}
+          SSH_KEY: ${{secrets.SSH_KEY}}
+          SSH_HOST: ${{secrets.SSH_HOST}}
+      - name: Backup previous version
+        run: ssh server bash ./createBackup.sh
+
