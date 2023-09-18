@@ -19,7 +19,7 @@ jobs:
           cat >> ~/.ssh/config << END
           HOST server
             HostName $SSH_HOST
-            User: $SSH_USER
+            User $SSH_USER
             IdentityFile ~/.ssh/server.key
             StrictHostKeyChecking no
           END
