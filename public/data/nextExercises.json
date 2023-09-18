@@ -73,5 +73,65 @@
         "id": "2023_15",
         "desc": "Gerätekunde + Aufräumen für den Sommer",
         "date": "2023-07-13T19:00"
+    },
+    {
+	"id": "2023_16",
+	"desc": "FWDV 3",
+	"date": "2023-09-07T19:00"
+    },
+    {
+	"id": "2023_17",
+	"desc": "Atemschutzunterweisung (nur PA-Träger)",
+	"date": "2023-09-15T19:00"
+    },
+    {
+	"id": "2023_18",
+	"desc": "THVU (Gemeinsame Übung mit Bromskirchen)",
+	"date": "2023-09-22T18:00"
+    },
+    {
+	"id": "2023_19",
+	"desc": "FWDV 3",
+	"date": "2023-10-05T19:00"
+    },
+    {
+	"id": "2023_20",
+	"desc": "FWDV 3",
+	"date": "2023-10-19T19:00"
+    },
+    {
+	"id": "2023_21",
+	"desc": "Theorieausbildung",
+	"date": "2023-11-02T19:00"
+    },
+    {
+	"id": "2023_22",
+	"desc": "GAMS / Ausleuchten",
+	"date": "2023-11-16T19:00"
+    },
+    {
+	"id": "2023_23",
+	"desc": "Funkübung",
+	"date": "2023-11-30T19:00"
+    },
+    {
+	"id": "2023_24",
+	"desc": "Fahrzeug- und Gerätekunde / Aufräumen vor der Winterpause",
+	"date": "2023-12-14T19:00"
+    },
+    {
+	"id": "2023_25",
+	"desc": "Weihnachtsfeier",
+	"date": "2023-12-16T19:00"
+    },
+    {
+	"id": "2024_01",
+	"desc": "Unfallverhütungsvorschriften",
+	"date": "2024-01-18T19:00"
+    },
+    {
+	"id":"2024_02",
+	"desc": "Erste Hilfe Unterweisung",
+	"date": "2024-02-01T19:00"
     }
 ]

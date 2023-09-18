@@ -16,11 +16,12 @@
         },
         {
             "role": "Schriftführer",
-            "name": "Robin Feike"
+            "name": "Nils Hofmann"
         },
         {
             "role": "Kassiererin",
-            "name": "Bianca Clemens"
+            "name": "Jana Hesse",
+	    "image": "img/vorstand/KA.jpeg"
         }
     ],
     "wehrfuehrung": [

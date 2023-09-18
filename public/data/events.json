@@ -1,17 +1,12 @@
 [
     {
-        "title": "Jahreshauptversammlung Gemeinde",
-        "time": "2023-03-04T19:00",
-        "display": false
+        "title": "Jugendclub Kirmes und Feuerwehrfest Röddenau",
+        "time": "2023-05-21T13:00",
+	"link": "aktuelles.html?id=festbesuche2023#roeddenau"
     },
     {
-        "title": "Jahreshauptversammlung 2022",
-        "time": "2023-03-18T19:00",
-        "link": "aktuelles.html?id=jhv2023"
-    },
-    {
-        "title": "Osterfeuer",
-        "time": "2023-04-08T19:00",
-        "display": false
+	    "title": "Feuerwehrfest Viermünden",
+	    "time": "2023-06-24T00:00",
+	    "link": "aktuelles.html?id=festbesuche2023#viermuenden"
     }
 ]

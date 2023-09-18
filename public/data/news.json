@@ -1,4 +1,15 @@
 [
+	{
+		"title": "Festbesuche 2023",
+		"id": "festbesuche2023",
+		"description": "Auch in diesem Jahr möchten wir wieder zu einigen Festen anderer Feuerwehren fahren."
+	},
+	{
+		"title": "Osterfeuer 2023",
+		"id": "osterfeuer2023",
+		"image": "img/news/osterfeuer/osterfeuer_01.jpeg",
+		"description": "Auch in diesem Jahr laden wir euch zu unserem Osterfeuer am 08.04. ab 19 Uhr am DHG in Rennertehausen ein."
+	},
     {
         "title": "Jahreshauptversammlung",
         "id": "jhv2023",

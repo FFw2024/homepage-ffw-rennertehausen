@@ -1,0 +1,12 @@
+name: upload-homepage
+
+run-name: ${{ github.actor }} uploaded a new version of the homepage
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  create_backup_job:
+    run: ssh feuerwehr-rennertehausen@ssh.strato.de ./createBackup.sh

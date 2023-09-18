@@ -1,4 +1,0 @@
-jobs:
-  create_backup_job:
-    name: create backup
-    run: ssh feuerwehr-rennertehausen@ssh.strato.de ./createBackup.sh
