@@ -29,4 +29,8 @@ jobs:
           SSH_HOST: ${{secrets.SSH_HOST}}
       - name: Backup previous version
         run: ssh server bash ./createBackup.sh
+      - name: Checkout repo
+        uses: actions/checkout@v4.0.0
+      - name: Upload new version
+        run: rsync -azP --delete ./public/* server:./www/
 
