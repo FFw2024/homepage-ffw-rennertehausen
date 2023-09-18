@@ -9,4 +9,6 @@ on:
 
 jobs:
   create_backup_job:
-    run: ssh feuerwehr-rennertehausen@ssh.strato.de ./createBackup.sh
+    runs-on: 'ubuntu-latest'
+    steps:
+      - run: ssh feuerwehr-rennertehausen@ssh.strato.de ./createBackup.sh
