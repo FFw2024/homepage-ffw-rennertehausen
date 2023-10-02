@@ -1,13 +1,13 @@
 const urlBase = document.head.baseURI;
 
-function formatEventTime(time) {  
+function formatEventTime(time) {
   if (time.getMinutes() == 0) {
     if (time.getHours() == 0) {
       return Intl.DateTimeFormat('de-DE', {
         year: "numeric", month:'2-digit', day:"2-digit"
       }).format(time);
     }
-    
+
     return Intl.DateTimeFormat('de-DE', {
       year: "numeric", month:'2-digit', day:"2-digit", hour: "numeric"
     }).format(time);
@@ -137,21 +137,25 @@ fetch(`${urlBase}data/news.json`)
       }
     })
 
-// get next exercise
-fetch(`${urlBase}data/nextExercises.json`)
-  .then(res => {
-    if (!res.ok) {
-      console.log(res);
-      throw res.statusText;
-    }
+function setNextExercise(exerciseCard) {
+  // get next exercise
+  fetch(exerciseCard.dataset.src)
+    .then(res => {
+      if (!res.ok) {
+        console.log(res);
+        throw res.statusText;
+      }
 
-    return res.json();
-  })
-  .then(data=> {
-    const exercise = data.find(element => new Date(element.date) >= Date.now());
+      return res.json();
+    })
+    .then(data => {
+      const exercise = data.find(element => new Date(element.date) >= Date.now());
 
-    // set card text
-    const exerciseCard = document.getElementById('nextExerciseCard');
-    exerciseCard.querySelector('div h5.card-title').textContent = formatEventTime(new Date(exercise.date));
-    exerciseCard.querySelector('div h6.card-subtitle').textContent = exercise.desc;
-  })
+      // set card text
+      exerciseCard.querySelector('div h5.card-title').textContent = formatEventTime(new Date(exercise.date));
+      exerciseCard.querySelector('div h6.card-subtitle').textContent = exercise.desc;
+    })
+}
+
+setNextExercise(document.getElementById('nextExerciseCard'))
+setNextExercise(document.getElementById('nextExerciseCardJfw'))
