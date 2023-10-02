@@ -21,7 +21,7 @@ function createRow(date, time, desc) {
 const dateFormatOptions = {
     day: "2-digit",
     month: "2-digit",
-    year: "numeric"
+    year: "numeric",
 };
 
 const timeFormatOptions = {
@@ -29,13 +29,17 @@ const timeFormatOptions = {
     minute: "2-digit"
 };
 
-fetch('data/nextExercises.json')
+fetch(table.dataset.src)
     .then(async (res) => {
         const data = await res.json();
 
         data.filter((item) => new Date(item.date) > Date.now()).forEach((item) => {
             const date = new Date(item.date);
+            let comment = '';
+            if (item.comment) {
+                comment = " " + item.comment;
+            }
 
-            createRow(date.toLocaleDateString('de-de', dateFormatOptions), date.toLocaleTimeString('de-de', timeFormatOptions) + " Uhr", item.desc)
+            createRow(date.toLocaleDateString('de-de', dateFormatOptions), date.toLocaleTimeString('de-de', timeFormatOptions) + " Uhr" + comment, item.desc)
         });
     });

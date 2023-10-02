@@ -1,0 +1,63 @@
+[
+    {
+        "id": "2023_01",
+        "date": "2023-10-09T18:00",
+        "desc": "Praktische Übung"
+    },
+    {
+        "id": "2023_02",
+        "date": "2023-10-23T18:00",
+        "desc": "Praktische Übung"
+    },
+    {
+        "id": "2023_03",
+        "date": "2023-11-06T18:00",
+        "desc": "Praktische Übung"
+    },
+    {
+        "id": "2023_04",
+        "date": "2023-11-20T18:00",
+        "desc": "Gerätekunde"
+    },
+    {
+        "id": "2023_05",
+        "date": "2023-12-04T18:00",
+        "desc": "Praktische Übung"
+    },
+    {
+        "id": "2023_06",
+        "date": "2023-12-15T18:00",
+        "desc": "Weihnachtsfeier und Jahresabschluss",
+        "comment": "in Zivil"
+    },
+    {
+        "id": "2024_01",
+        "date": "2024-01-08T18:00",
+        "desc": "Erste Hilfe"
+    },
+    {
+        "id": "2024_02",
+        "date": "2024-01-22T18:00",
+        "desc": "UVV Übung"
+    },
+    {
+        "id": "2024_03",
+        "date": "2024-02-03T17:00",
+        "desc": "LAN-Party"
+    },
+    {
+        "id": "2024_04",
+        "date": "2024-02-12T18:00",
+        "desc": "Praktische Übung"
+    },
+    {
+        "id": "2024_05",
+        "date": "2024-02-26T18:00",
+        "desc": "Praktische Übung"
+    },
+    {
+        "id": "2024_06",
+        "date": "2024-03-11T18:00",
+        "desc": "Praktische Übung"
+    }
+]
