@@ -1,15 +1,25 @@
 [
-	{
-		"title": "Festbesuche 2023",
-		"id": "festbesuche2023",
-		"description": "Auch in diesem Jahr möchten wir wieder zu einigen Festen anderer Feuerwehren fahren."
-	},
-	{
-		"title": "Osterfeuer 2023",
-		"id": "osterfeuer2023",
-		"image": "img/news/osterfeuer/osterfeuer_01.jpeg",
-		"description": "Auch in diesem Jahr laden wir euch zu unserem Osterfeuer am 08.04. ab 19 Uhr am DHG in Rennertehausen ein."
-	},
+    {
+        "title": "Tagesfahrt auf den Frankfurter Weihnachtsmarkt",
+        "id": "fahrtWeihnachtsmarkt2023",
+        "description": "Nach drei Jahren Pause möchten wir Euch gerne wieder eine Tagesfahrt anbieten. Dabei wird das Ziel der Frankfurter Weihnachtsmarkt sein."
+    },
+    {
+        "title": "Herbstwanderung zur Jause auf dem Dachsloch",
+        "id": "herbstwanderung2023",
+        "description": "Seid ihr bereit für eine Wanderung durch den schönen Herbstwald? Am Samstag, den 21. Oktober 2023 möchten wir zusammen mit Euch zur Jause auf dem Dachsloch wandern."
+    },
+    {
+        "title": "Festbesuche 2023",
+        "id": "festbesuche2023",
+        "description": "Auch in diesem Jahr möchten wir wieder zu einigen Festen anderer Feuerwehren fahren."
+    },
+    {
+        "title": "Osterfeuer 2023",
+        "id": "osterfeuer2023",
+        "image": "img/news/osterfeuer/osterfeuer_01.jpeg",
+        "description": "Auch in diesem Jahr laden wir euch zu unserem Osterfeuer am 08.04. ab 19 Uhr am DHG in Rennertehausen ein."
+    },
     {
         "title": "Jahreshauptversammlung",
         "id": "jhv2023",
