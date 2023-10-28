@@ -1,6 +1,41 @@
 {
     "2023": [
         {
+            "id": "2023_07",
+            "time": "2023-10-27T11:28:00.000",
+            "title": "Einsatz 07/2023",
+            "word": "H KLEMM 2Y",
+            "image": "/img/alarms/2023_07/2023_07_04.jpeg",
+            "vehicles": [
+                {
+                    "desc": "LF 8/6",
+                    "href": "/einsatzabteilung/fahrzeuge.html#lf86"
+                },
+                {
+                    "desc": "Feuerwehr Battenberg",
+                    "href": "http://www.ffw-battenberg.de/"
+                },
+                {
+                    "desc": "Feuerwehr Frankenberg",
+                    "href": "https://www.facebook.com/FWFKB"
+                }
+            ],
+            "description": "Am Freitagvormittag wurden wir gemeinsam mit der <a class=\"text-decoration-none\" target=\"_blank\" rel=\"noreferrer noopener\" href=\"http://www.ffw-battenberg.de/\">Feuerwehr Battenberg</a> und der <a class=\"text-decoration-none\" target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://www.facebook.com/FWFKB\">Feuerwehr Frankenberg</a> zu einem Verkehrsunfall bei Battenberg alarmiert.\nMit im Einsatz waren mehrere RTW, Notärzte und die Polizei.",
+            "location": "Battenberg (Eder)/B253",
+            "participants": 15,
+            "duration": 0.0,
+            "links": [
+                {
+                    "desc": "Artikel im 112 Magazin",
+                    "href": "https://112-magazin.de/waldeck-frankenberg/kb-polizei/item/36264-schwerer-verkehrsunfall-bei-battenberg-sieben-personen-verletzt"
+                },
+                {
+                    "desc": "Artikel in der HNA",
+                    "href": "https://www.hna.de/lokales/frankenberg/battenberg-eder-ort305268/sieben-menschen-bei-unfall-im-bereich-b253-b236-bei-battenberg-schwer-verletzt-92640648.html"
+                }
+            ]
+        },
+        {
             "id": "2023_06",
             "time": "2023-07-24T00:08:00.000",
             "title": "Einsatz 06/2023",
