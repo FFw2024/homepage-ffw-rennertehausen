@@ -1,124 +1,4 @@
-[
-    {
-        "id": "2023_01",
-        "desc": "Unfallverhütungsvorschriften",
-        "date": "2023-01-12T19:00"
-    },
-    {
-        "id": "2023_02",
-        "desc": "Erste Hilfe Unterweisung",
-        "date": "2023-01-26T19:00"
-    },
-    {
-        "id": "2023_03",
-        "desc": "THVU Großübung",
-        "date": "2023-02-04T09:00"
-    },
-    {
-        "id": "2023_04",
-        "desc": "Knotenkunde",
-        "date": "2023-02-16T19:00"
-    },
-    {
-        "id": "2023_05",
-        "desc": "FWDV 3",
-        "date": "2023-03-02T19:00"
-    },
-    {
-        "id": "2023_06",
-        "desc": "FWDV 3",
-        "date": "2023-03-16T19:00"
-    },
-    {
-        "id": "2023_07",
-        "desc": "Höhenrettung / Abseilen von Personen",
-        "date": "2023-03-30T19:00"
-    },
-    {
-        "id": "2023_08",
-        "desc": "Gemeinsames Aufräumen fürs Osterfeuer",
-        "date": "2023-04-05T19:00"
-    },
-    {
-        "id": "2023_09",
-        "desc": "FWDV 3",
-        "date": "2023-04-13T19:00"
-    },
-    {
-        "id": "2023_10",
-        "desc": "FWDV 3",
-        "date": "2023-04-27T19:00"
-    },
-    {
-        "id": "2023_11",
-        "desc": "FWDV 3",
-        "date": "2023-05-11T19:00"
-    },
-    {
-        "id": "2023_12",
-        "desc": "GAMS",
-        "date": "2023-05-25T19:00"
-    },
-    {
-        "id": "2023_13",
-        "desc": "FWDV 10",
-        "date": "2023-06-08T19:00"
-    },
-    {
-        "id": "2023_14",
-        "desc": "FWDV 3 Wasserentnahme offenes Gewässer",
-        "date": "2023-06-22T19:00"
-    },
-    {
-        "id": "2023_15",
-        "desc": "Gerätekunde + Aufräumen für den Sommer",
-        "date": "2023-07-13T19:00"
-    },
-    {
-	"id": "2023_16",
-	"desc": "FWDV 3",
-	"date": "2023-09-07T19:00"
-    },
-    {
-	"id": "2023_17",
-	"desc": "Atemschutzunterweisung (nur PA-Träger)",
-	"date": "2023-09-15T19:00"
-    },
-    {
-	"id": "2023_18",
-	"desc": "THVU (Gemeinsame Übung mit Bromskirchen)",
-	"date": "2023-09-21T19:00"
-    },
-    {
-	"id": "2023_19",
-	"desc": "FWDV 3",
-	"date": "2023-10-05T19:00"
-    },
-    {
-	"id": "2023_20",
-	"desc": "FWDV 3",
-	"date": "2023-10-19T19:00"
-    },
-    {
-	"id": "2023_21",
-	"desc": "Theorieausbildung",
-	"date": "2023-11-02T19:00"
-    },
-    {
-	"id": "2023_22",
-	"desc": "GAMS / Ausleuchten",
-	"date": "2023-11-16T19:00"
-    },
-    {
-	"id": "2023_23",
-	"desc": "Funkübung",
-	"date": "2023-11-30T19:00"
-    },
-    {
-	"id": "2023_24",
-	"desc": "Fahrzeug- und Gerätekunde / Aufräumen vor der Winterpause",
-	"date": "2023-12-14T19:00"
-    },
+[    
     {
 	"id": "2023_25",
 	"desc": "Weihnachtsfeier",
@@ -130,8 +10,78 @@
 	"date": "2024-01-18T19:00"
     },
     {
-	"id":"2024_02",
-	"desc": "Erste Hilfe Unterweisung",
-	"date": "2024-02-01T19:00"
+        "id": "2024_JHV",
+        "desc": "Jahreshauptversammlung",
+        "date": "2024-01-27T19:00"
+    },
+    {
+        "id":"2024_02",
+        "desc": "Erste Hilfe Unterweisung",
+        "date": "2024-02-01T19:00"
+    },
+    {
+        "id": "2024_03",
+        "desc": "THVU Part 1",
+        "date": "2024-02-15T19:00"
+    },
+    {
+        "id": "2024_04",
+        "desc": "THVU Part 2",
+        "date": "2024-02-29T19:00"
+    },
+    {
+        "id": "2024_05",
+        "desc": "THVU Part 3",
+        "date": "2024-03-14T19:00"
+    },
+    {
+        "id": "2024_06",
+        "desc": "THVU Großübung",
+        "date": "2024-03-16T10:00"
+    },
+    {
+        "id": "2024_07",
+        "desc": "Aufräumen/Aufbauen Osterfeuer",
+        "date": "2024-03-28T19:00"
+    },
+    {
+        "id": "2024_08",
+        "desc": "Osterfeuer",
+        "date": "2024-03-30T10:00"
+    },
+    {
+        "id": "2024_09",
+        "desc": "FWDV 3",
+        "date": "2024-04-11T19:00"
+    },
+    {
+        "id": "2024_10",
+        "desc": "FWDV 10 Tragbare Leitern",
+        "date": "2024-04-25T19:00"
+    },
+    {
+        "id": "2024_11",
+        "desc": "FWDV 3",
+        "date": "2024-05-08T19:00"
+    },
+    {
+        "id": "2024_12",
+        "desc": "FWDV 3",
+        "date": "2024-05-23T19:00"
+    },
+    {
+        "id": "2024_13",
+        "desc": "Wasserentnahme offenes Gewässer",
+        "date": "2024-06-06T19:00"
+    },
+    {
+        "id": "2024_14",
+        "desc": "Kreisentscheid",
+        "date": "2024-06-16T07:00"
+    },
+    {
+        "id": "2024_15",
+        "desc": "Lange Wegstrecken / Wasserentnahme offene Gewässer",
+        "date": "2024-06-20T19:00"
     }
 ]
