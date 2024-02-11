@@ -38,14 +38,12 @@
     ],
     "jugendfeuerwehr": [
         {
-            "role": "Jugendwartin",
-            "name": "Jana Hesse",
-            "image": "img/vorstand/JW1.jpeg"
+            "role": "Jugendwart",
+            "name": "Maximilian Blotenberg"
         },
         {
             "role": "stellv. Jugendwart",
-            "name": "David Schubert",
-            "image": "img/vorstand/JW2.jpeg"
+            "name": "Finn Kraus"
         }
     ]
 }
