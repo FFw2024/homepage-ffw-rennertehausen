@@ -1,4 +1,95 @@
 {
+    "2024": [
+        {
+            "id": "2024_03",
+            "time": "2024-06-23T19:39",
+            "title": "Einsatz 03/2024",
+            "word": "F2 Unklare Rauchentwicklung",
+            "vehicles": [
+                {
+                    "desc": "LF 8/6",
+                    "href": "/einsatzabteilung/fahrzeuge.html#lf86"
+                },
+                {
+                    "desc": "MTF",
+                    "href": "/einsatzabteilung/fahrzeuge.html#mtf"
+                },
+                {
+                    "desc": "Feuerwehr Allendorf",
+                    "href": "https://www.feuerwehr-allendorf-eder.de"
+                }
+            ],
+            "description": "Am heutigen Abend, wurden wir gemeinsam mit den Kameraden der Feuerwehr Allendorf zu einer unklaren Rauchentwicklung alarmiert. Laut Meldung des Anrufers kam, es zu einer Rauchentwicklung aus dem Dachstuhl eines Gebäudes. Bei Eintreffen hat sich nach erster Erkundung zwar die starke Rauchentwicklung bestätigt, diese ging aber von einem stark rauchenden Grill aus.\nSomit konnten wir ohne eingreifen wieder abrücken.",
+            "location": "Allendorf, Schulstraße",
+            "participants": 20,
+            "duration": 0.5
+        },
+        {
+            "id": "2024_02",
+            "time": "2024-03-24T21:20",
+            "title": "Einsatz 02/2024",
+            "word": "H KLEMM 1 Y",
+            "image": "/img/alarms/2024_02/2024_02_01.jpeg",
+            "vehicles": [
+                {
+                    "desc": "LF 8/6",
+                    "href": "/einsatzabteilung/fahrzeuge.html#lf86"
+                },
+                {
+                    "desc": "MTF",
+                    "href": "/einsatzabteilung/fahrzeuge.html#mtf"
+                },
+                {
+                    "desc": "Feuerwehr Allendorf",
+                    "href": "https://www.feuerwehr-allendorf-eder.de"
+                }
+            ],
+            "description": "Am Sonntagabend wurden wir, zusammen mit der <a class=\"text-decoration-none\" target=\"_blank\" rel=\"noreferrer noopener\" href=\"https://www.feuerwehr-allendorf-eder.de\">Feuerwehr Allendorf (Eder)</a>, zu einem Verkehrsunfall mit einer eingeklemmten Person alarmiert. Unsere Aufgabe bestand darin, die verletzte Person aus dem Fahrzeug zu befreien. Da die Person kompliziert im Fußraum eingeklemmt war und sehr wenig Platz zum arbeiten vorhanden war, gestaltete sich die Rettung zunächst etwas schwierig. Der einsetzende Regen machte die Rettung nicht einfacher. Nachdem wir die Person befreien und dem Rettungsdienst übergeben konnten, stand die Reinigung und Wartung der Geräte auf dem Plan.\nGegen 00: 30 Uhr konnte unser Team den Heimweg antreten.\nWir möchten uns auch für die gute Zusammenarbeit mit Rettungsdienst und Polizei bedanken.",
+            "location": "B253",
+            "participants": 21,
+            "duration": 3.0,
+            "links": [
+                {
+                    "desc":"Artikel im 112 Magazin",
+                    "href": "https://112-magazin.de/waldeck-frankenberg/kb-feuerwehr/item/36920-b253-bei-rennertehausen-gegen-baum-und-eingeklemmt"
+                }
+            ]
+        },
+        {
+            "id": "2024_01",
+            "time": "2024-01-10T18:57",
+            "title": "Einsatz 01/2024",
+            "word": "H KLEMM 1 Y",
+            "vehicles": [
+                {
+                    "desc": "LF 8/6",
+                    "href": "/einsatzabteilung/fahrzeuge.html#lf86"
+                },
+                {
+                    "desc": "MTF",
+                    "href": "/einsatzabteilung/fahrzeuge.html#mtf"
+                },
+                {
+                    "desc": "Feuerwehr Allendorf",
+                    "href": "https://www.feuerwehr-allendorf-eder.de"
+                },
+                {
+                    "desc": "Feuerwehr Bromskirchen",
+                    "href": ""
+                },
+                {
+                    "desc": "Feuerwehr Somplar",
+                    "href": "https://ffw-somplar.de.tl"
+                }
+            ],
+            "links": [
+                {
+                    "desc": "Artikel im 112 Magazin",
+                    "href": "https://112-magazin.de/waldeck-frankenberg/kb-polizei/item/36598-schwerer-unfall-auf-bundesstrasse-236-vier-personen-verletzt"
+                }
+            ]
+        }
+    ],
     "2023": [
         {
             "id": "2023_07",

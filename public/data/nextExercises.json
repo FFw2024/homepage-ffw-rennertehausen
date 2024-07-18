@@ -1,87 +1,72 @@
-[    
+[
     {
-	"id": "2023_25",
-	"desc": "Weihnachtsfeier",
-	"date": "2023-12-16T19:00"
+        "id": "2024_16",
+        "desc": "THVU",
+        "date": "2024-07-18T18:00"
     },
     {
-	"id": "2024_01",
-	"desc": "Unfallverhütungsvorschriften",
-	"date": "2024-01-18T19:00"
+        "id": "2024_17",
+        "desc": "Löschwasser, Zisternen, Hydranten",
+        "date": "2024-08-01T19:00"
     },
     {
-        "id": "2024_JHV",
-        "desc": "Jahreshauptversammlung",
-        "date": "2024-01-27T19:00"
+        "id": "2024_18",
+        "desc": "FWDV 3",
+        "date": "2024-08-15T19:00"
     },
     {
-        "id":"2024_02",
+        "id": "2024_19",
+        "desc": "FWDV 3",
+        "date": "2024-08-29T19:00"
+    },
+    {
+        "id": "2024_20",
+        "desc": "FWDV 3",
+        "date": "2024-09-12T19:00"
+    },
+    {
+        "id": "2024_21",
+        "desc": "FWDV 3",
+        "date": "2024-09-26T19:00"
+    },
+    {
+        "id": "2024_22",
+        "desc": "THVU",
+        "date": "2024-10-10T19:00"
+    },
+    {
+        "id": "2024_23",
+        "desc": "Großübung THVU",
+        "date": "2024-10-12T10:00"
+    },
+    {
+        "id": "2024_24",
+        "desc": "Funkübung / Koordinatenfahrt",
+        "date": "2024-10-24T19:00"
+    },
+    {
+        "id": "2024_25",
+        "desc": "Ausleuchten von Einsatzstellen / Personensuche",
+        "date": "2024-11-07T19:00"
+    },
+    {
+        "id": "2024_26",
+        "desc": "Knotenkunde / Personenrettung",
+        "date": "2024-11-21T19:00"
+    },
+    {
+        "id": "2024_27",
         "desc": "Erste Hilfe Unterweisung",
-        "date": "2024-02-01T19:00"
+        "date": "2024-12-05T19:00"
     },
     {
-        "id": "2024_03",
-        "desc": "THVU Part 1",
-        "date": "2024-02-15T19:00"
+        "id": "2024_28",
+        "desc": "Fahrzeug- und Gerätekunde",
+        "date": "2024-12-19T19:00"
     },
     {
-        "id": "2024_04",
-        "desc": "THVU Part 2",
-        "date": "2024-02-29T19:00"
-    },
-    {
-        "id": "2024_05",
-        "desc": "THVU Part 3",
-        "date": "2024-03-14T19:00"
-    },
-    {
-        "id": "2024_06",
-        "desc": "THVU Großübung",
-        "date": "2024-03-16T10:00"
-    },
-    {
-        "id": "2024_07",
-        "desc": "Aufräumen/Aufbauen Osterfeuer",
-        "date": "2024-03-28T19:00"
-    },
-    {
-        "id": "2024_08",
-        "desc": "Osterfeuer",
-        "date": "2024-03-30T10:00"
-    },
-    {
-        "id": "2024_09",
-        "desc": "FWDV 3",
-        "date": "2024-04-11T19:00"
-    },
-    {
-        "id": "2024_10",
-        "desc": "FWDV 10 Tragbare Leitern",
-        "date": "2024-04-25T19:00"
-    },
-    {
-        "id": "2024_11",
-        "desc": "FWDV 3",
-        "date": "2024-05-08T19:00"
-    },
-    {
-        "id": "2024_12",
-        "desc": "FWDV 3",
-        "date": "2024-05-23T19:00"
-    },
-    {
-        "id": "2024_13",
-        "desc": "Wasserentnahme offenes Gewässer",
-        "date": "2024-06-06T19:00"
-    },
-    {
-        "id": "2024_14",
-        "desc": "Kreisentscheid",
-        "date": "2024-06-16T07:00"
-    },
-    {
-        "id": "2024_15",
-        "desc": "Lange Wegstrecken / Wasserentnahme offene Gewässer",
-        "date": "2024-06-20T19:00"
+        "id": "2024_29",
+        "desc": "Weihnachtsfeier",
+        "date": "2024-12-20"
     }
 ]
