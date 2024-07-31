@@ -16,21 +16,89 @@
 
 <body>
     <!-- header and navbar -->
-    <header class="container-fluid">
-        <div class="row">
-            <img class="img-fluid img-banner px-0" src="img/banner.jpeg" alt="banner" />
-        </div>
-    </header>
+    <div class="row mx-0">
+        <img class="img-fluid img-banner px-0" src="img/banner.jpeg" alt="banner" />
+    </div>
+
+    <header class="container-fluid sticky-top"></header>
+    
     <script type="text/javascript" src="js/menu.js"></script>
 
     <main class="container-md py-3">
         <div class="row">
             <div class="col-sm-8">
-                <h1>Herzlich Willkommen</h1>
-                <h2>auf der Homepage der Freiwilligen Feuerwehr Rennertehausen</h2>
-                <p>Auf dieser Seite findet ihr Informationen zu anstehenden Veranstaltungen, unserer Einsatzabteilung und zu unserer Jugendfeuerwehr.</p>
-                <p>Diese Homepage befindet sich momentan noch im Aufbau. Daher kann es vorkommen, dass einige Links
-                    nicht wie gewohnt funktionieren.</p>
+                <h1>Herzlich willkommen</h1><h3>auf der Homepage der</h3>
+                <img class="w-100" src="img/logo_gross.svg"/>
+                
+                <p>Auf dieser Seite findet ihr Informationen zu anstehenden Veranstaltungen, unserer Einsatzabteilung und zu unserer Jugendfeuerwehr.</p>                                
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="card m-2" id="eventsCard">
+                    <div class="card-body">
+                        <h5 class="card-title">N&#228;chste Termine</h5>
+                        <div class="list-group list-group-flush">
+                        </div>
+                    </div>
+                    
+                    <template id="eventTemplate">
+                        <a class="list-group-item list-group-item-action">
+                            <strong></strong><span></span>
+                        </a>
+                    </template>
+                </div>
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Kontakt:</h5>
+                        <p class="card-text">Vorstand: <a href="mailto://vorstand@feuerwehr-rennertehausen.de"
+                            class="text-decoration-none text-primary">vorstand@feuerwehr-rennertehausen.de</a></p>
+                        </div>
+                    </div>
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Links</h5>
+                            <div class="d-flex flex-column">
+                                <h6 class="card-subtitle my-2">&#214;rtliche Vereine</h6>
+                                <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener"
+                                href="https://www.sv-rennertehausen.de">Sportverin Rennertehausen</a>
+                                <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener"
+                                href="https://mgv-rennertehausen.de">MGV Rennertehausen</a>
+                                <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener"
+                                href="https://www.schuetzenverein1930ev.info">Sch&#252;tzenverein Rennertehausen</a>
+                                
+                                <h6 class="card-subtitle my-2">Feuerwehr</h6>
+                                <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener"
+                                href="https://kfv.feuerwehr-waldeck-frankenberg.de">Kreisfeuerwehrverband</a>
+                                <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener"
+                                href="https://www.feuerwehr-allendorf-eder.de">Feuerwehr Allendorf</a>
+                                <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener"
+                                href="http://www.ffw-battenberg.de">Feuerwehr Battenberg</a>
+                                
+                                <h6 class="card-subtitle my-2">Social Media</h6>
+                                <div class="flex-row">
+                                    <a class="me-2" title="Instagram" target="_blank" rel="noreferrer noopener"
+                                    href="https://www.instagram.com/feuerwehr_rth">
+                                    <i class="text-primary bi bi-instagram"></i>
+                                </a>
+                                <a class="me-2" title="Facebook" target="_blank" rel="noreferrer noopener"
+                                href="https://www.facebook.com/feuerwehr.rennertehausen">
+                                <i class="text-primary bi bi-facebook"></i>
+                            </a>
+                        </div>
+                        
+                        <h6 class="card-subtitle my-2">Weiteres</h6>
+                        <div class="flex-row">
+                            <a class="me-2 text-decoration-none" title="750 Jahre Rennertehausen" target="_blank" rel="noreferrer noopener" href="https://www.750-jahre-rennertehausen.de/">
+                                750 Jahre Rennertehausen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-2">
 
                 <!-- Next exercise -->
                 <div class="mt-3">
@@ -82,81 +150,13 @@
                                     <h5 class="card-title"></h5>
                                     <h6 class="card-subtitle mb-2 text-muted"></h6>
                                     <a class="card-link stretched-link"></a>
-
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    
                 </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="card m-2" id="eventsCard">
-                    <div class="card-body">
-                        <h5 class="card-title">N&#228;chste Termine</h5>
-                        <div class="list-group list-group-flush">
-                        </div>
-                    </div>
-
-                    <template id="eventTemplate">
-                        <a class="list-group-item list-group-item-action">
-                            <strong></strong><span></span>
-                        </a>
-                    </template>
-                </div>
-                <div class="card m-2">
-                    <div class="card-body">
-                        <h5 class="card-title">Kontakt:</h5>
-                        <p class="card-text">Vorstand: <a href="mailto://vorstand@feuerwehr-rennertehausen.de"
-                                class="text-decoration-none text-primary">vorstand@feuerwehr-rennertehausen.de</a></p>
-                    </div>
-                </div>
-                <div class="card m-2">
-                    <div class="card-body">
-                        <h5 class="card-title">Links</h5>
-                        <div class="d-flex flex-column">
-                            <h6 class="card-subtitle my-2">&#214;rtliche Vereine</h6>
-                            <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener"
-                                href="https://www.sv-rennertehausen.de">Sportverin Rennertehausen</a>
-                            <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener"
-                                href="https://mgv-rennertehausen.de">MGV Rennertehausen</a>
-                            <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener"
-                                href="https://www.schuetzenverein1930ev.info">Sch&#252;tzenverein Rennertehausen</a>
-
-                            <h6 class="card-subtitle my-2">Feuerwehr</h6>
-                            <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener"
-                                href="https://kfv.feuerwehr-waldeck-frankenberg.de">Kreisfeuerwehrverband</a>
-                            <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener"
-                                href="https://www.feuerwehr-allendorf-eder.de">Feuerwehr Allendorf</a>
-                            <a class="me-2 text-decoration-none" target="_blank" rel="noreferrer noopener"
-                                href="http://www.ffw-battenberg.de">Feuerwehr Battenberg</a>
-
-                            <h6 class="card-subtitle my-2">Social Media</h6>
-                            <div class="flex-row">
-                                <a class="me-2" title="Instagram" target="_blank" rel="noreferrer noopener"
-                                    href="https://www.instagram.com/feuerwehr_rth">
-                                    <i class="text-primary bi bi-instagram"></i>
-                                </a>
-                                <a class="me-2" title="Facebook" target="_blank" rel="noreferrer noopener"
-                                    href="https://www.facebook.com/feuerwehr.rennertehausen">
-                                    <i class="text-primary bi bi-facebook"></i>
-                                </a>
-                            </div>
-
-                            <h6 class="card-subtitle my-2">Weiteres</h6>
-                            <div class="flex-row">
-                                <a class="me-2 text-decoration-none" title="750 Jahre Rennertehausen" target="_blank" rel="noreferrer noopener" href="https://www.750-jahre-rennertehausen.de/">
-                                    750 Jahre Rennertehausen
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-2">
             <h1>Aktuelles</h1>
             <div class="row row-cols-1 g-2" id="newsList">
 
