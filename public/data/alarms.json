@@ -1,6 +1,20 @@
 {
     "2024": [
         {
+            "id": "2024_04",
+            "time": "2024-08-16T15:38",
+            "title": "Einsatz 04/2024",
+            "word": "H KLEMM 1 Y",
+            "vehicles": [
+                {
+                    "desc": "LF 8/6",
+                    "href": "/einsatzabteilung/fahrzeuge.html#lf86"
+                }
+            ],
+            "description": "Am 16. August wurden wir zu einem Verkehrsunfall mit einer eingeklemmten Person alarmiert.\nBevor wir an der Einsatzstelle eintrafen, erreichte uns bereits die Rückmeldung, dass die Person das Fahrzeug verlassen konnte und wir nicht mehr benötigt wurden. So konnten die Kameraden und Kameradinnen ohne Tätig werden zu müssen, wieder nach Hause zurückkehren.",
+            "location": "Sauerlandstraße"            
+        },
+        {
             "id": "2024_03",
             "time": "2024-06-23T19:39",
             "title": "Einsatz 03/2024",
