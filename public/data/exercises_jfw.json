@@ -59,5 +59,35 @@
         "id": "2024_06",
         "date": "2024-03-11T18:00",
         "desc": "Praktische Übung"
+    },
+    {
+        "id": "2024_07",
+        "date": "2024-10-09T18:00",
+        "desc": "Praktische Übung"
+    },
+    {
+        "id": "2024_08",
+        "date": "2024-10-19T18:00",
+        "desc": "Jugendfeuerwehr Olympiade"
+    },
+    {
+        "id": "2024_09",
+        "date": "2024-10-23T18:00",
+        "desc": "Ausklang der Wettkämpfe"
+    },
+    {
+        "id": "2024_10",
+        "date": "2024-11-06T18:00",
+        "desc": "Übung"
+    },
+    {
+        "id": "2024_11",
+        "date": "2024-11-20T18:00",
+        "desc": "Übung"
+    },
+    {
+        "id": "2024_12",
+        "date": "Dezember 2024",
+        "desc": "Weihnachtsfeier"
     }
 ]

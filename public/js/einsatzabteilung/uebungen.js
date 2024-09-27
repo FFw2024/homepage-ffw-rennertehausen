@@ -82,14 +82,17 @@ if (searchParams) {
       const card = document.importNode(cardTemplate, true);
 
       if (exercise.image) {
-        const imageElement = card.querySelector('div.col-md-4 img.img-fluid');
+        const imageElement = card.querySelector('img');
         imageElement.src = exercise.image;
       }
 
-      const hearderElement = card.querySelector('div.col-md-8 h5.card-title');
+      const hearderElement = card.querySelector('h5.card-title');
       hearderElement.textContent = exercise.title;
 
-      const linkElement = card.querySelector('div.col-md-8 a.card-link');
+      const contentElement = card.getElementById('cardContent');
+      contentElement.textContent = exercise.description.substring(0, exercise.description.search(/\.|\?/) + 1);
+
+      const linkElement = card.querySelector('a.card-link');
       linkElement.href =
           `${urlBase}einsatzabteilung/uebungen.html?id=${exercise.id}`;
 
@@ -107,7 +110,7 @@ if (searchParams) {
         section.appendChild(header);
 
         const list = document.createElement('div');
-        list.classList.add('row', 'row-cols-md-2', 'g-2', 'm-2');
+        list.classList.add('g-2', 'm-2');
         section.appendChild(list);
 
         createCards(list, exercises);

@@ -17,26 +17,21 @@
 <body>
     <script type="text/javascript" src="js/menu.js"></script>
     <main class="container-md py-3">
-        <h1 id="title">&#220;bungen</h1>
+        <h1 id="title">&#220;bungen</h1>        
 
         <div id="content">
 
         </div>
 
-        <template id="templateCard">
-            <div class="col">
-                <div class="card h-100">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img class="img-fluid rounded-start" />
-                        </div>
-                        <div class="card-body col-md-8">
-                            <h5 class="card-title"></h5>
-                            <a class="card-link stretched-link"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <template id="templateCard">            
+            <div class="card d-flex flex-row m-2" style="height: 10rem;">                                    
+                <img class="w-25 rounded-start" style="object-fit: cover; object-position: 50% 50%;" />                        
+                <div class="card-body w-75 d-flex flex-column">
+                    <h5 class="card-title"></h5>
+                    <div class="card-text overflow-hidden h-100" id="cardContent"></div>
+                    <a class="card-link stretched-link"></a>
+                </div>                    
+            </div>            
         </template>
 
         <script type="text/javascript" src="js/einsatzabteilung/uebungen.js"></script>

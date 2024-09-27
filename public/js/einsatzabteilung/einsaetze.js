@@ -28,7 +28,7 @@ if (searchParams.has('id')) {
   const year = id.substring(0, 4);
 
   getData().then(data => data[year].find(item => item.id == id)).then(alarm => {
-    document.getElementById('title').innerText = alarm.title;    
+    document.getElementById('title').innerText = alarm.title;
 
     const header = document.createElement('h3');
     header.classList.add('text-muted');
@@ -76,16 +76,24 @@ if (searchParams.has('id')) {
       hour: '2-digit',
       minute: '2-digit'
     }));
-    createTableRow('Einsatzkräfte', alarm.participants);
-    createTableRow('Fahrzeuge', alarm.vehicles.map(item => {
-      if (item.href) {
-        return `<a class="text-decoration-none" target="_blank" rel="noreferrer noopener" href="${item.href}">${item.desc}</a>`;
-      }
-      
-      return item.desc;
-    }).join(', '));
+    if (alarm.participants) {
+      createTableRow('Einsatzkräfte', alarm.participants);
+    }
+    createTableRow(
+        'Fahrzeuge',
+        alarm.vehicles
+            .map(item => {
+              if (item.href) {
+                return `<a class="text-decoration-none" target="_blank" rel="noreferrer noopener" href="${
+                    item.href}">${item.desc}</a>`;
+              }
+
+              return item.desc;
+            })
+            .join(', '));
     if (alarm.duration) {
-      createTableRow('Einsatzdauer', `${alarm.duration} Stunden`.replace('.', ','));
+      createTableRow(
+          'Einsatzdauer', `${alarm.duration} Stunden`.replace('.', ','));
     }
 
     const divDesc = document.createElement('div');
@@ -109,15 +117,15 @@ if (searchParams.has('id')) {
         a.classList.add('text-decoration-none')
         a.href = link.href;
         a.innerText = link.desc;
-        a.target = "_blank";
-        a.rel = "noreferrer noopener";
+        a.target = '_blank';
+        a.rel = 'noreferrer noopener';
 
         linkDiv.appendChild(a);
         divDesc.appendChild(linkDiv);
       });
     }
   });
-    
+
   const main = document.getElementsByTagName('main')[0];
 
   const button = document.createElement('button');
